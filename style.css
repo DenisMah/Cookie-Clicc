@@ -1,0 +1,49 @@
+.main{
+    justify-content: center;
+    display:flex;
+    flex-direction: row;
+
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.main img{
+    border-radius: 50%;
+    width: 300px;
+}
+
+.add div{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#cookie {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* Add a transition for smooth animation */
+}
+
+
+
+.enlarge {
+    animation: cookieEnlarge 0.15s linear;
+}
+
+
+
+@keyframes cookieEnlarge {
+    0%{
+        scale:100%;
+    }
+
+    50%{
+        scale:110%;
+    }
+
+    100%{
+        scale:100%;
+    }
+}
