@@ -6,12 +6,35 @@
 }
 
 body{
-    background-color: aliceblue;
+    background-color: gray;
+}
+
+.green{
+    background-color: pink;
+    color:green;
+}
+
+table{
+    font-family:"Jersey 20"
+}
+
+.table img {
+width: 120px;
 }
 
 .main img{
-    border-radius: 50%;
-    width: 300px;
+    width: 350px;
+    margin-bottom: 3em;
+}
+.jersey-20-regular {
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#money{
+    font-family: "Jersey 20";
 }
 
 .add div{
