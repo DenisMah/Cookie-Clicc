@@ -75,6 +75,8 @@ function updateGrandmaPrice(){
     grandmaprice.innerText = `Grandma - ${dynamicGrandmaPrice}$`;
 }
 setInterval(updateGrandmaPrice,1000);
+// <-----------------------------------------------------------> //
+
 
 
 

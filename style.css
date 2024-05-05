@@ -73,19 +73,18 @@ body{
     margin-bottom: 5px;
     cursor: pointer;
     color: white;
-    display: flex;
+
     text-transform: uppercase;
-    flex-direction: column;
+    justify-content: flex-start;
+    flex-direction: row;
     font-family: "Jersey 20";
 }
-.purchaseItem img{
-    width: 64px;
-    height: 64px;
-}
+
 .purchases{
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 .stats{
     text-align: center;
@@ -103,10 +102,14 @@ body{
 
 .upgradable{
     margin-top:0.5em;
-    background-color: white;
-    width: 30px;
-    border:3px solid white
+
 }
+
+.upgradable:hover{
+    cursor: pointer;
+}
+
+
 
 .stats p{
     color: white;
@@ -142,7 +145,6 @@ body{
 }
 
 .settings{
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
