@@ -13,15 +13,18 @@
 
 
     <div class="container">
-        <div class="money">
-            <p id="money">Money earned: 0$</p>
-        </div>
-    </div>
-
-    <div class="container">
         <div class="main">
+            <div class="bakeryname">
+                <p id = "bakeryname">Grandma's Bakery</p>
+            </div>
             <div class="cookie">
                 <img src="cookie.png" id = "cookie" alt="">
+            </div>
+            <div class="cookiesstats">
+                <p id = "cookiesbaked">Cookies baked:
+                </p>
+                <p id="money">0</p>
+                <p class="persec">Per second: 0</p>
             </div>
         </div>
     </div>
@@ -34,74 +37,34 @@
 
 
     <div class="container-fluid">
-        <div class="add">
+        <div class="sidenav">
             <div class="row">
-                <div class="col-md-4">
+                <div class="maincookierow">
                     <div class="purchases">
-                        <!-- Here we will make purchases for the various upgrades -->
-                    <table class="table table-dark">
-                        <thead>
-                        <tr>
-                            <th>PURCHASE</th>
-                        </tr>
-                        </thead>
-                        <tbody class="table table-light">
-                        <tr>
-                            <td id = "granny">
-                                <p>GRANNY
-                                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a98be3cf-4125-41ea-a0c1-669bf1a92a65/dcx4hs0-45883a46-aca9-406c-9047-5b3d6a2248f6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E5OGJlM2NmLTQxMjUtNDFlYS1hMGMxLTY2OWJmMWE5MmE2NVwvZGN4NGhzMC00NTg4M2E0Ni1hY2E5LTQwNmMtOTA0Ny01YjNkNmEyMjQ4ZjYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.quWeGFTj5mxh-SbRZcJPjUZDnKxVpso3xqVsQGmpx0g" alt="">
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>
-                                    GIRL SCOUT
-                                    <img src="girlscout-removebg-preview.png" alt="">
-                                </p>
-
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                        <p id = "upgrades">PURCHASES</p>
+                        <div class="purchaseItem" id = "granny">Granny</div>
+                        <div class="purchaseItem">2</div>
+                        <div class="purchaseItem">3</div>
+                        <div class="purchaseItem">4</div>
+                        <div class="purchaseItem">5</div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="cookies">
-                        <!-- Here we will put cookies to be upgraded -->
-                        <table class="table table-dark">
-                            <thead>
-                            <tr>
-                                <th>UPGRADE</th>
-                            </tr>
-                            </thead>
-                            <tbody class="table table-light">
-                                <tr>
-                                    <td id = "bigupgrade">
-                                        lol
-                                    </td>
-                                </tr>
-                            <tr>
-                                <td>
-                                    xd
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- Here we will put temprary upgrades if you watch an ad -->
-                    <div class="powerups">
-                    BUFFS
-
+                        <div class="stats">
+                            <p id = "stats">TOTAL STATS</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        </div>
+
+    <div class="bakerymodal">
+        <h1>Input bakery name</h1>
+        <input type="text" name="" id="" placeholder="Try something like...">
+        <button id = "closemodal">3O4LS</button>
+    </div>
+
+
 
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
