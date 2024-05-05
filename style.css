@@ -1,19 +1,19 @@
+body{
+    background-color: grey;
+}
 .main{
     align-items: center;
     display:flex;
     flex-direction: column;
 }
-
-
 .bakeryname{
     margin-top:3em;
     border: 2.7px solid #414a4c;
-    padding: 0.5em;
+    padding-left: 5em;
+    padding-right: 5em;
     margin-bottom: 1.7em;
     border-radius: 10px;
 }
-
-
 .bakerymodal{
     display: none;
     color:wheat;
@@ -28,29 +28,22 @@
     background-color: rgba(0,0,0,1);
     z-index: 301;
 }
-
-
 .bakerymodal input{
     margin-top: 0em;
     width: 350px;
     height: 60px;
 }
-
 #closemodal{
     position: absolute;
     right: 0.5em;
     top:0.5em;
 }
-
 .bakeryname p{
     font-family: "Jersey 20", sans-serif;
     font-size: 30px;
     text-align: center;
     color:black;
 }
-
-
-
 .sidenav {
     height: 100%; /* 100% Full-height */
     width: 18%; /* 0 width - change this with JavaScript */
@@ -64,28 +57,6 @@
     transition: 0.5s;
 }
 
-
-body{
-    background-color: gray;
-}
-
-.green{
-    background-color: pink;
-    color:green;
-}
-
-
-.maincookierow{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-}
-
-#granny:hover{
-    display: none;
-}
-
-
 #upgrades{
     color: white;
     font-size: 30px;
@@ -96,32 +67,57 @@ body{
     width: 350px;
     margin-bottom: 3em;
 }
-.jersey-20-regular {
-    font-family: "Jersey 20", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
 
 .purchaseItem{
     padding:0.5em;
     margin-bottom: 5px;
     cursor: pointer;
     color: white;
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column;
+    font-family: "Jersey 20";
 }
-
-#stats{
-    font-size:30px;
+.purchaseItem img{
+    width: 64px;
+    height: 64px;
+}
+.purchases{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stats{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     font-family: "Jersey 20", sans-serif;
 }
 
+.upgradeItem{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.upgradable{
+    margin-top:0.5em;
+    background-color: white;
+    width: 30px;
+    border:3px solid white
+}
+
+.stats p{
+    color: white;
+    font-size: 30px;
+    font-family: "Jersey 20", sans-serif;
+}
 #cookiesbakedmoney{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
-
-
 .cookiesstats{
     display: flex;
     flex-direction: column;
@@ -131,26 +127,33 @@ body{
     font-family: "Jersey 20", sans-serif;
     font-size: 60px;
 }
-
 #cookiesbaked{
     font-family: "Jersey 20", sans-serif;
     font-size: 40px;
     color: black;
 }
 
+.accountsettings{
+    position:fixed;
+    bottom:0;
+    left: 0;
+    background-color: wheat;
+
+}
+
+.settings{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 #cookie {
     cursor: pointer;
     transition: transform 0.2s ease-in-out; /* Add a transition for smooth animation */
 }
-
-
-
 .enlarge {
     animation: cookieEnlarge 0.15s linear;
 }
-
-
-
 @keyframes cookieEnlarge {
     0%{
         scale:100%;
