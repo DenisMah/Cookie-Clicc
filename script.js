@@ -1,19 +1,19 @@
 
 // <-----------------------------------------------------------> //
 // Handle money and updating the money dynamically//
+const moneyPerSecond = document.querySelector('#persec');
+const moneyElement = document.querySelector("#money");
+
 let money = 0;
-const moneyElement = document.querySelector('#money');
+
 function updateMoney(){
-    let totalMoney = 1*grandmacount;
-    moneyPerSecond.innerHTML = `Per second: ${totalMoney}`;
-    moneyElement.innerHTML = `${money}$`;
+    let totalMoney = grandmacount * 1 + clickerCount * 0.25;
+    moneyElement.innerHTML = `${money}$`
+    moneyPerSecond.innerHTML = `Per second: ${totalMoney}$`
 }
-setInterval(updateMoney,1000);
+setInterval(updateMoney, 1000);
 
-const moneyPerSecond = document.querySelector('.persec');
 
-moneyPerSecond.innerHTML = `
-`
 // <-----------------------------------------------------------> //
 // Handle the modal and allow bakery name change //
 const openmodal = document.querySelector("#bakeryname");
@@ -39,10 +39,7 @@ function showModal(){
 
 //Cookie clicking functionality & incrementing money each time you click on the cookie//
 const cookie = document.querySelector("#cookie");
-const moneyElement = document.querySelector("#money");
-
 cookie.addEventListener("click", e =>{
-    console.log("clicked")
     money++;
     moneyElement.innerText = `${money}$`
     cookie.classList.add('enlarge');
@@ -64,6 +61,10 @@ clicker.addEventListener('click', e =>{
     }
 })
 
+
+clicker.addEventListener('mouseenter', e =>{
+
+})
 
 function clickerMoney(){
     money+=0.25*clickerCount;
