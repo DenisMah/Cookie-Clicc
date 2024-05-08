@@ -29,19 +29,25 @@ function guideThrough(){
                 case "YES":
                     openingPopup.classList.remove("openingButton");
                     openingPopup.classList.add("hide");
+                    createShopName();
                     break;
 
                 case "NO":
-                    openingPopup.classList.add("hide");
-                   const shname= document.createElement('input');
-                   shname.classList.add("shopname");
 
-                   document.body.appendChild(shname);
+
+
             }
         })
     })
 }
 
 function createShopName(){
-
+    const shopname = document.createElement('div');
+    shopname.innerHTML =
+        `
+        <h5>Enter shop name</h5>
+        <input type="text">
+        `
+    shopname.classList.add("shopname");
+    document.body.appendChild(shopname);
 }
