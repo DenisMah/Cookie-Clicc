@@ -1,86 +1,70 @@
-//First we will open the modal so the user gets familiar with the game //
+$(document).ready(function() { // Ensure the DOM is loaded
 
-//This element will be used to select the popup
-const pop = document.createElement('div')
-pop.classList.add('openingPopup');
-document.body.appendChild(pop);
+    // Opening Modal Logic 
+    const cookie = $('.main'); 
 
-const openingPopup = document.querySelector(".openingPopup");
-openingPopup.innerHTML =
-    `
-    <h1>Welcome!</h1>
-    <h3>Press anywhere to continue...</h3>
-    `
-openingPopup.addEventListener("click", () => {
-guideThrough();
-})
+    let cookieprice = 10;
+    let cookieRevenue = 0.25;
 
+    let grandmaPrice = 100;
+    let grandmaRevenue = 1;
 
+    const purchases = [
+        { name: "cursor", price: cookieprice, cookiesPerSecond: cookieRevenue, image: "Images/cursor.png" },
+        { name: "Grandma", price: grandmaPrice, cookiesPerSecond: grandmaRevenue, image: "Images/Grandma_new.png" }
+    ];
 
-const cookie = document.querySelector('.main');
+    $('body').append('<div class="openingPopup"></div>'); // Create popup container
+    const openingPopup = $(".openingPopup");
+    openingPopup.html('<h1>Welcome!</h1><h3>Press anywhere to continue...</h3>');
 
+    openingPopup.click(guideThrough); // Click event on the whole popup
 
+    function guideThrough() {
+        openingPopup.html('<h1> Have you ever played cookie clicker ? </h1><h2><span class = "openingButton">YES</span><span>/</span><span class = "openingButton">NO</span></h2>');
 
-
-function guideThrough(){
-    openingPopup.innerHTML =`
-    <h1> Have you ever played cookie clicker ? </h1>
-    <h2><span class = "openingButton">YES</span><span>/</span><span class = "openingButton">NO</span></h2>
-    `
-    const buttonChoice = document.querySelectorAll(".openingButton")
-    buttonChoice.forEach(button => {
-        button.addEventListener("click", e => {
-            switch (e.target.textContent) {
-                case "YES":
-                    openingPopup.classList.remove("openingButton");
-                    openingPopup.classList.add("hide");
-                    createShopName();
-                    break;
-
-                case "NO":
-<<<<<<< HEAD
-
-
-
-=======
-                    openingPopup.classList.add("hide");
-                    createShopName();
-
-                    break;
->>>>>>> 28dfa50 (Making graphical improvements)
+        $(".openingButton").click(function(e) { // Event on buttons
+            if ($(this).text() === "YES") { 
+                openingPopup.addClass("hide");
+                createShopName();
+            } else {
+                openingPopup.addClass("hide");
+                createShopName();
             }
-        })
-    })
-}
+        });
+    }
 
-function createShopName(){
-<<<<<<< HEAD
-    const shopname = document.createElement('div');
-    shopname.innerHTML =
-        `
-        <h5>Enter shop name</h5>
-        <input type="text">
-        `
-    shopname.classList.add("shopname");
-    document.body.appendChild(shopname);
-}
-=======
-    const bakeryname = document.querySelector("#bakeryname");
-    const shname= document.createElement('input');
-    const sidenav = document.querySelector(".sideNav");
-    shname.placeholder="Input bakery name..."
-    shname.classList.add("shopname");
-    shname.maxLength = 24;
-    document.body.appendChild(shname);
+    function createShopName() {
+        $('body').append('<div class="shopname"></div>');
+        const shopname = $(".shopname");
+        const bakeryname = $("#bakeryname");
+        const sidenav = $(".sideNav");
 
-    shname.addEventListener('keydown', ev => {
+        shopname.append('<input type="text" class="shopname" placeholder="Input bakery name..." maxlength="24">');
+
+        $('.shopname input').keydown(function(ev) {
             if (ev.key === "Enter") {
-                document.body.removeChild(shname);
-                sidenav.classList.remove("hide");
-                cookie.classList.remove('hide')
-                bakeryname.innerHTML= ev.target.value;
+                sidenav.removeClass("hide");
+                cookie.removeClass('hide')
+                bakeryname.text($(this).val()); // Set bakery name
+                $(this).remove(); // Remove input
+                shopname.remove(); 
             }
-        }
-    )
-}
->>>>>>> 28dfa50 (Making graphical improvements)
+        });
+    }
+
+    function loadPurchases(purchase) {
+        $('.purchases').append(`
+            <div class="purchaseItem">
+                ${purchase.name}, ${purchase.price}, ${purchase.cookiesPerSecond}
+                <img src="${purchase.image}"> 
+            </div>
+        `);
+    }
+
+    function renderPurchases() {
+        purchases.forEach(loadPurchases); // forEach is cleaner in this case
+    }
+
+    renderPurchases();
+});
