@@ -17,6 +17,11 @@ guideThrough();
 
 
 
+const cookie = document.querySelector('.main');
+
+
+
+
 function guideThrough(){
     openingPopup.innerHTML =`
     <h1> Have you ever played cookie clicker ? </h1>
@@ -33,15 +38,23 @@ function guideThrough(){
                     break;
 
                 case "NO":
+<<<<<<< HEAD
 
 
 
+=======
+                    openingPopup.classList.add("hide");
+                    createShopName();
+
+                    break;
+>>>>>>> 28dfa50 (Making graphical improvements)
             }
         })
     })
 }
 
 function createShopName(){
+<<<<<<< HEAD
     const shopname = document.createElement('div');
     shopname.innerHTML =
         `
@@ -51,3 +64,23 @@ function createShopName(){
     shopname.classList.add("shopname");
     document.body.appendChild(shopname);
 }
+=======
+    const bakeryname = document.querySelector("#bakeryname");
+    const shname= document.createElement('input');
+    const sidenav = document.querySelector(".sideNav");
+    shname.placeholder="Input bakery name..."
+    shname.classList.add("shopname");
+    shname.maxLength = 24;
+    document.body.appendChild(shname);
+
+    shname.addEventListener('keydown', ev => {
+            if (ev.key === "Enter") {
+                document.body.removeChild(shname);
+                sidenav.classList.remove("hide");
+                cookie.classList.remove('hide')
+                bakeryname.innerHTML= ev.target.value;
+            }
+        }
+    )
+}
+>>>>>>> 28dfa50 (Making graphical improvements)

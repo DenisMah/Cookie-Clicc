@@ -1,7 +1,10 @@
-body{
-    background-image: url('backgroundgif.gif');
-    background-size: cover;
+:root{
+    --tanbrown: #c59560;
 }
+body{
+    background-color: var(--tanbrown)
+}
+
 /*Opening popup modal so the user can input the bakery's name */
 .openingPopup{
     font-family: "Jersey 20";
@@ -21,8 +24,36 @@ body{
     color:white;
 }
 
+.main{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main img{
+    width: 256px;
+}
+
+.sideNav{
+    position: fixed;
+    width: 15%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-right:3px solid wheat;
+
+}
+
 .shopname{
     font-family: "Jersey 20", sans-serif;
+<<<<<<< HEAD
+=======
+    font-size:2em;
+>>>>>>> 28dfa50 (Making graphical improvements)
     border: 5px solid;
     background-color: rgba(255,255,255,1);
     position: fixed;
@@ -30,6 +61,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
+<<<<<<< HEAD
     font-size: 32px;
     text-align: center;
     z-index: 5;
@@ -39,6 +71,37 @@ body{
     font-size:32px;
     font-family: "Jersey 20", sans-serif;
     border: 5px solid;
+=======
+    border-radius: 50px;
+    text-align: center;
+}
+
+.bakeryname{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#bakeryname{
+
+    border: 5px solid black;
+    border-radius: 15px;
+    text-align: center;
+    font-family: "Jersey 20", sans-serif;
+    font-size:32px;
+    background: rgba(255,255,255,.9);
+    width: 80%;
+}
+
+
+#settings{
+    top:0;
+    right: 0;
+    position: fixed;
+    margin-top: 15px;
+    margin-right: 15px;
+   width: 64px;
+>>>>>>> 28dfa50 (Making graphical improvements)
 }
 
 .hide{
