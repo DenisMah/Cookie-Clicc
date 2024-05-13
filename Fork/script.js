@@ -1,70 +1,135 @@
-$(document).ready(function() { // Ensure the DOM is loaded
+const cookie = document.querySelector('.main');
+const purchaseDiv = document.querySelector('.purchases')
+let purchaseCounter = 0;
 
-    // Opening Modal Logic 
-    const cookie = $('.main'); 
+//This element will be used to select the popup
+const pop = document.createElement('div')
+pop.classList.add('openingPopup');
+document.body.appendChild(pop);
 
-    let cookieprice = 10;
-    let cookieRevenue = 0.25;
+const openingPopup = document.querySelector(".openingPopup");
+openingPopup.innerHTML =
+    `
+    <h1>Welcome!</h1>
+    <h3>Press anywhere to continue...</h3>
+    `
+openingPopup.addEventListener("click", () => {
+guideThrough();
+})
 
-    let grandmaPrice = 100;
-    let grandmaRevenue = 1;
 
-    const purchases = [
-        { name: "cursor", price: cookieprice, cookiesPerSecond: cookieRevenue, image: "Images/cursor.png" },
-        { name: "Grandma", price: grandmaPrice, cookiesPerSecond: grandmaRevenue, image: "Images/Grandma_new.png" }
-    ];
 
-    $('body').append('<div class="openingPopup"></div>'); // Create popup container
-    const openingPopup = $(".openingPopup");
-    openingPopup.html('<h1>Welcome!</h1><h3>Press anywhere to continue...</h3>');
+function guideThrough(){
+    openingPopup.innerHTML =`
+    <h1> Have you ever played cookie clicker ? </h1>
+    <h2><span class = "openingButton">YES</span><span>/</span><span class = "openingButton">NO</span></h2>
+    `
+    const buttonChoice = document.querySelectorAll(".openingButton")
+    buttonChoice.forEach(button => {
+        button.addEventListener("click", e => {
+            switch (e.target.textContent) {
+                case "YES":
+                    openingPopup.classList.remove("openingButton");
+                    openingPopup.classList.add("hide");
+                    createShopName();
+                    break;
 
-    openingPopup.click(guideThrough); // Click event on the whole popup
+                case "NO":
 
-    function guideThrough() {
-        openingPopup.html('<h1> Have you ever played cookie clicker ? </h1><h2><span class = "openingButton">YES</span><span>/</span><span class = "openingButton">NO</span></h2>');
+                    openingPopup.classList.add("hide");
+                    createShopName();
 
-        $(".openingButton").click(function(e) { // Event on buttons
-            if ($(this).text() === "YES") { 
-                openingPopup.addClass("hide");
-                createShopName();
-            } else {
-                openingPopup.addClass("hide");
-                createShopName();
+                    break;
             }
-        });
-    }
+        })
+    })
+}
 
-    function createShopName() {
-        $('body').append('<div class="shopname"></div>');
-        const shopname = $(".shopname");
-        const bakeryname = $("#bakeryname");
-        const sidenav = $(".sideNav");
+function createShopName(){
 
-        shopname.append('<input type="text" class="shopname" placeholder="Input bakery name..." maxlength="24">');
+    const shopname = document.createElement('div');
 
-        $('.shopname input').keydown(function(ev) {
+    shopname.classList.add("shopname");
+    document.body.appendChild(shopname);
+
+
+    const bakeryname = document.querySelector("#bakeryname");
+    const shname= document.createElement('input');
+    const sidenav = document.querySelector(".sideNav");
+    shname.placeholder="Input bakery name..."
+    shname.classList.add("shopname");
+    shname.maxLength = 24;
+    document.body.appendChild(shname);
+
+    shname.addEventListener('keydown', ev => {
             if (ev.key === "Enter") {
-                sidenav.removeClass("hide");
-                cookie.removeClass('hide')
-                bakeryname.text($(this).val()); // Set bakery name
-                $(this).remove(); // Remove input
-                shopname.remove(); 
+                document.body.removeChild(shname);
+                sidenav.classList.remove("hide");
+                cookie.classList.remove('hide')
+                bakeryname.innerHTML= ev.target.value;
+                document.body.removeChild(shopname)
             }
-        });
+        }
+    )
+}
+
+
+
+// This is the array of purchases
+
+
+
+const purchases = [
+    {
+        id:0,
+        name: "cursor",
+        image:"Images/cursor.png",
+        isPurchasable:true,
+        count:0,
+        clickerPrice:10,
+        clickerRevenue:0.25
+    }
+    ,
+    {   id:1,
+        name: "Grandma",
+        image:"Images/Grandma_new.png",
+        isPurchasable:false,
+        count:0,
+        grandmaPrice:120,
+        grandmaRevenue:1.5},
+    {
+        id:2,
+        name: "Grandma",
+        image:"Images/Grandma_new.png",
+        isPurchasable:false,
+        count:0
     }
 
-    function loadPurchases(purchase) {
-        $('.purchases').append(`
-            <div class="purchaseItem">
-                ${purchase.name}, ${purchase.price}, ${purchase.cookiesPerSecond}
-                <img src="${purchase.image}"> 
-            </div>
-        `);
-    }
+]
 
-    function renderPurchases() {
-        purchases.forEach(loadPurchases); // forEach is cleaner in this case
-    }
 
-    renderPurchases();
-});
+function loadNextPurchasableItem(purchasableItem) {
+    if(purchasableItem.isPurchasable === true){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+function loadPurchasases(){
+    for(let index = 0; index < purchases.length; index++) {
+        if(purchases[index].isPurchasable === true){
+            const bb = document.createElement('div');
+            bb.innerHTML = purchases[index].name;
+            purchaseDiv.appendChild(bb);
+            console.log(purchases[index]);
+            purchases[index+1].isPurchasable =true;
+        }
+    }
+}
+
+
+
+loadPurchasases();
+
