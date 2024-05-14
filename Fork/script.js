@@ -124,15 +124,7 @@ cookieElement.addEventListener('click', e =>{
     setInterval(() =>{
       cookieElement.classList.remove('enlarge')  
     }, 300)
-    rotate(cookieElement)
+    
 
 })
 
-function rotate(image){
-    image.rotate(20*Math.PI/100)
-}
-
-function applyEnlargeClass(element){
-    setInterval(element.classList.add('enlarge'), 200);
-    element.classList.remove('enlarge');
-}
