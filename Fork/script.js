@@ -1,6 +1,20 @@
 const cookie = document.querySelector('.main');
 const purchaseDiv = document.querySelector('.purchases')
 let purchaseCounter = 0;
+const cookieElement = document.querySelector('#cookie')
+
+
+//This element is used to store user information obviously
+
+// TODO - IMPLEMENT SAVE FEATURE
+
+const userInformation = {
+    shopname:'name',
+    money:0,
+    moneyPerSecond:0
+}
+
+
 
 //This element will be used to select the popup
 const pop = document.createElement('div')
@@ -18,6 +32,7 @@ guideThrough();
 })
 
 
+//Guide the user through the game 
 
 function guideThrough(){
     openingPopup.innerHTML =`
@@ -68,6 +83,8 @@ function createShopName(){
                 cookie.classList.remove('hide')
                 bakeryname.innerHTML= ev.target.value;
                 document.body.removeChild(shopname)
+                let name = ev.target.value;
+                userInformation.shopname = name;
             }
         }
     )
@@ -75,13 +92,12 @@ function createShopName(){
 
 
 
+
+
 // This is the array of purchases
 
-
-
 const purchases = [
-    {
-        id:0,
+    {   id:0,
         name: "cursor",
         image:"Images/cursor.png",
         isPurchasable:true,
@@ -90,46 +106,33 @@ const purchases = [
         clickerRevenue:0.25
     }
     ,
-    {   id:1,
+     {   id:1,
         name: "Grandma",
         image:"Images/Grandma_new.png",
         isPurchasable:false,
         count:0,
         grandmaPrice:120,
-        grandmaRevenue:1.5},
-    {
-        id:2,
-        name: "Grandma",
-        image:"Images/Grandma_new.png",
-        isPurchasable:false,
-        count:0
     }
-
 ]
 
 
-function loadNextPurchasableItem(purchasableItem) {
-    if(purchasableItem.isPurchasable === true){
-        return true;
-    } else {
-        return false;
-    }
+// Increase user's money on click, and enlarge the cookie so it looks bigger on click //
+
+cookieElement.addEventListener('click', e =>{
+    userInformation.money += 1;
+    cookieElement.classList.add('enlarge');
+    setInterval(() =>{
+      cookieElement.classList.remove('enlarge')  
+    }, 300)
+    rotate(cookieElement)
+
+})
+
+function rotate(image){
+    image.rotate(20*Math.PI/100)
 }
 
-
-function loadPurchasases(){
-    for(let index = 0; index < purchases.length; index++) {
-        if(purchases[index].isPurchasable === true){
-            const bb = document.createElement('div');
-            bb.innerHTML = purchases[index].name;
-            purchaseDiv.appendChild(bb);
-            console.log(purchases[index]);
-            purchases[index+1].isPurchasable =true;
-        }
-    }
+function applyEnlargeClass(element){
+    setInterval(element.classList.add('enlarge'), 200);
+    element.classList.remove('enlarge');
 }
-
-
-
-loadPurchasases();
-

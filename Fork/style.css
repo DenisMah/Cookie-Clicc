@@ -30,6 +30,18 @@ body{
     flex-direction: column;
 }
 
+#cookie{
+    margin: 5em;
+}
+
+
+.enlarge{
+    
+
+    scale:110%
+ 
+}
+
 .sideNav h1{
     text-align: center;
     color:white;
