@@ -1,0 +1,73 @@
+
+
+/*Navigation bar element*/
+#navigation-bar {
+    height: 80px;
+    background-color: white;
+}
+.navbar img {
+    width: 42px;
+}
+
+
+
+/* Purchase menu div ( The popup ) */
+.purchase-menu {
+    display: none;
+    background-color: wheat;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 25%;
+    z-index: 15;
+    position: fixed;
+}
+.purchase-menu button {
+    padding: 15px;
+    top: 0;
+    right: 0;
+    position: fixed;
+}
+
+
+/*Animations classes for transitioning*/
+
+.animation{
+    animation: popUp 0.5s ease;
+}
+
+/* ^ This one closes. And this one opens V */
+
+.animation-open{
+    animation: open-purchase-div 0.5s ease;
+}
+
+
+
+
+
+
+
+
+/* Animations. Open-purchase-div pops up the transition while popUp removes it from the screen, kinda */
+
+@keyframes open-purchase-div{
+    0%{
+        transform: translateX(800px);
+    
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes popUp{
+    0%{
+        transform:translateX(0);
+        opacity: 100%;
+    }
+    100%{
+        transform: translateX(800px);
+        opacity: 0%;
+    }
+}
