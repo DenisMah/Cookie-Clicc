@@ -1,15 +1,15 @@
 
-//
-
+// ? Here I put all my query selectors in one place.
 const purchaseMenu = document.querySelector('.purchase-menu');
 const shoppingcart = document.querySelector('#shopping-cart');
 const button = document.querySelector('#close-button');
 
 
-//* This allows me to toggle on and off my purchase-menu div
+
+//* This allows me to toggle on and off my purchase-menu div & adds an animation to the popup.
 
 shoppingcart.addEventListener('click', ev =>{ 
-       purchaseMenu.style.display = 'block';
+    purchaseMenu.style.display = 'block';
     purchaseMenu.classList.add('animation-open');
     setTimeout(()=>{
 
@@ -28,3 +28,5 @@ button.addEventListener('click', ev =>{
         purchaseMenu.classList.remove('animation');
     },499);
 })
+
+

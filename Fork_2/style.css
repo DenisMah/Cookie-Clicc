@@ -13,6 +13,8 @@
 
 /* Purchase menu div ( The popup ) */
 .purchase-menu {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
     display: none;
     background-color: wheat;
     top: 0;
