@@ -1,9 +1,8 @@
-
-
 /*Navigation bar element*/
 #navigation-bar {
     height: 80px;
     background-color: white;
+    margin-bottom: 4rem;
 }
 
 #logo{
@@ -25,7 +24,18 @@
 
 /*Make the 'X' appear & add custom animation menu when user clicks.*/
 
-.navigation-item span{
+
+.navigation-item span:nth-child(1){
+    top:75%;
+}
+.navigation-item span:nth-child(3){
+    top:85%;
+}
+.navigation-item:hover{
+    cursor: pointer;
+}
+
+.menu-span{
     top:65%;
     height: 3px;
     width: 35px;
@@ -35,16 +45,26 @@
     transform: translate(-50%, -50%);
     transform: .3s ease;
 }
-.navigation-item span:nth-child(1){
-    top:75%;
-}
-.navigation-item span:nth-child(3){
-    top:85%;
-}
-.navigation-item span:hover{
-    cursor: pointer;
+
+.menu-span.test{
+    background-color: black;
 }
 
+.menu-span.test:nth-child(1){
+    top:75%;
+    transform: rotate(45deg);
+    transform: .3s ease;
+}
+
+.menu-span.test:nth-child(2){
+    opacity: 0;
+}
+
+.menu-span.test:nth-child(3){
+    top:75%;
+    transform: rotate(-45deg);
+    transform: .3s ease;
+}
 
 
 /* Purchase menu div ( The popup ) */
@@ -97,13 +117,13 @@
     flex-direction: column;
     display: flex;
     border-radius: 25px;
-    margin-top: 5em;
-    margin-bottom: 1em;
+    top:0;
+    left: 0;
     overflow-y: auto;
-    position: relative;
     width: 100%;
-    height: 580px;
+    height: 100%;
     background-color: wheat;
+    z-index: 1;
 }
 
 .menuspan-close{
@@ -124,6 +144,81 @@
 .menuspan-close:hover{
     cursor: pointer;
 }
+
+
+
+/*MAIN SECTION*/
+
+
+
+.mainsection img{
+    position: relative;
+    width: 100%;
+}
+
+.mainsection h1{
+    text-transform: uppercase;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: white; 
+}
+
+.mainsection p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: white; 
+}
+
+
+.cookie{
+    display: flex;
+    justify-content: center;
+}
+
+.cookie:hover{
+    scale: 105%;
+    transition: .3s ease-in-out;
+}
+
+#main_section_cookie{
+    margin-top: 3em;
+    border-radius: 50%;
+    width: 55%;
+}
+
+.cookies-info{
+    border-left: 3px solid rgb(252,212,137);
+    margin-top: 3em;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.cookies-info p{
+    font-size: 32px;
+}
+
+#cookies-info-button{
+    margin-top: 3em;
+    padding: 15px 75px;
+    border: none;
+    border-radius: 35px;
+    background-color: rgb(252,212,137);
+    font-size: 16px;
+}
+
+#cookies-info-button:hover{
+    scale:105%;
+    transition: .2s ease-in-out;
+    box-shadow: 1px 1px 5px 5px rgb(248, 173, 33);
+}
+
 
 /*Animations classes for transitioning*/
 
@@ -146,6 +241,27 @@
     animation: slideUpWithOpacity 0.5s ease;
 }
 
+
+/* These two animations deal with the X on the left rotating for 315/-315 degrees. */
+
+.animation-rotate1 {
+    animation: rotate1 0.5s ease forwards; 
+  }
+  
+.animation-rotate2 { 
+    animation: rotate2 0.5s ease forwards;
+ }
+ 
+
+/* */
+
+.animation-rotate3{
+    animation: rotate3 0.5 ease forwards;
+}
+
+.animation-rotate4{
+    animation: rotate4 0.5 ease forwards;
+}
 
 /* Animations. Open-purchase-div pops up the transition while popUp removes it from the screen, kinda */
 
@@ -170,8 +286,6 @@
     }
 }
 
-
-
 @keyframes slideDownWithOpacity {
     0%{
         transform: translateY(-5em);
@@ -190,3 +304,26 @@
         opacity: 0%;
     }
 }
+
+ 
+@keyframes rotate1 {
+    0%{
+        transform: rotate(0deg);
+    }
+
+
+    100%{
+        transform: rotate(315deg);
+    }
+  }
+  
+  @keyframes rotate2 { 
+    0%{ 
+        transform: rotate(0deg); 
+    }
+
+
+    100%{
+        transform: rotate(-315deg);
+    } 
+  }
