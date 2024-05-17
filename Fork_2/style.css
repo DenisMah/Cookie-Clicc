@@ -150,16 +150,21 @@
 /*MAIN SECTION*/
 
 
+.mainsection{
+    position: relative;
+    overflow: hidden;
+}
 
 .mainsection img{
-    position: relative;
+    height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .mainsection h1{
     text-transform: uppercase;
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%); 
     text-align: center;
@@ -168,7 +173,7 @@
 
 .mainsection p{
     position: absolute;
-    top: 50%;
+    top: 29%;
     left: 50%;
     transform: translate(-50%, -50%); 
     text-align: center;
@@ -180,6 +185,7 @@
     display: flex;
     justify-content: center;
 }
+
 
 .cookie:hover{
     scale: 105%;
@@ -220,6 +226,33 @@
 }
 
 
+/*This section  handles the three images for the shop section */
+
+.shop-section{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.shop:hover{
+    filter: blur(1px);
+}
+
+.shop h1:hover{
+    filter: none !important;
+}
+
+#shop-cookies{
+    background-color: gold;
+    background-image: url("cookie-shop.png");
+}
+
+#shop-chocolates{
+    background-color: green;
+    background-image: url("pexels-joshsorenson-1546890.jpg");
+}
+
+
 /*Animations classes for transitioning*/
 
 .animation{
@@ -253,8 +286,6 @@
  }
  
 
-/* */
-
 .animation-rotate3{
     animation: rotate3 0.5 ease forwards;
 }
@@ -270,6 +301,7 @@
         transform: translateX(800px);
     
     }
+
     100%{
         transform: translateX(0px);
     }
@@ -280,6 +312,7 @@
         transform:translateX(0);
         opacity: 100%;
     }
+
     100%{
         transform: translateX(800px);
         opacity: 0%;
@@ -311,7 +344,6 @@
         transform: rotate(0deg);
     }
 
-
     100%{
         transform: rotate(315deg);
     }
@@ -321,7 +353,6 @@
     0%{ 
         transform: rotate(0deg); 
     }
-
 
     100%{
         transform: rotate(-315deg);
