@@ -227,29 +227,14 @@
 
 
 /*This section  handles the three images for the shop section */
-
 .shop-section{
     display: flex;
     flex-direction: row;
-
+    justify-content: space-around;
 }
 
-.shop:hover{
-    filter: blur(1px);
-}
-
-.shop h1:hover{
-    filter: none !important;
-}
-
-#shop-cookies{
-    background-color: gold;
-    background-image: url("cookie-shop.png");
-}
-
-#shop-chocolates{
-    background-color: green;
-    background-image: url("pexels-joshsorenson-1546890.jpg");
+.shop-item{
+    
 }
 
 
