@@ -1,12 +1,10 @@
-
-
 // ? Here I put all my query selectors in one place.
 const purchaseMenu = document.querySelector('.purchase-menu');
 const shoppingcart = document.querySelector('#shopping-cart');
 const button = document.querySelectorAll('.close-purchase-menu-span');
 const navbar = document.querySelector('.navbar')
 const menu = document.querySelectorAll('.menu-span')
-
+const mainsection = document.querySelector('.mainsection');
 
 //* This allows me to toggle on and off my purchase-menu div & adds an animation to the popup.
 
@@ -14,7 +12,6 @@ shoppingcart.addEventListener('click', ev =>{
     purchaseMenu.style.display = 'block';
     purchaseMenu.classList.add('animation-open');
     setTimeout(()=>{
-
     purchaseMenu.classList.remove('animation-open');
     },499)
     
@@ -44,8 +41,31 @@ menu.forEach((menuspan) =>{
         menunav.classList.add('menu-nav')
         menunav.innerHTML = `
         LOL
+        <br>
+        <br>
+        LOL
+        <br>
+        <br>
+        LOL
+        <br>
+        <br>
+        LOL
+        <br>
+        <br>
+        LOL
+        <br>
+        <br>
+        LOL
+        <br>
+        <br>
+        LOL
+        <br>
+        <br>
+        LOL
+        <br>
+        <br>
         `
-        navbar.appendChild(menunav)
+        mainsection.prepend(menunav);
         menunav.classList.add('animation-slidein')
         menu.forEach(span => span.classList.add('test'));
         menu[0].classList.add('animation-rotate1'); 
@@ -63,9 +83,8 @@ menu.forEach((menuspan) =>{
                 menu[0].classList.remove('animation-rotate1'); 
                 menu[2].classList.remove('animation-rotate2'); 
                 setTimeout(() =>{
-                navbar.removeChild(menunav)
+                menunav.remove();
                 menu.forEach(span => span.classList.remove('test'));
-                
                 canclick = 1;
                 })
             })
@@ -73,3 +92,7 @@ menu.forEach((menuspan) =>{
         }
     })
 })
+
+
+//* JQuery part of the code 
+
