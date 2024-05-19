@@ -8,91 +8,72 @@ const mainsection = document.querySelector('.mainsection');
 
 //* This allows me to toggle on and off my purchase-menu div & adds an animation to the popup.
 
-shoppingcart.addEventListener('click', ev =>{ 
-    purchaseMenu.style.display = 'block';
-    purchaseMenu.classList.add('animation-open');
-    setTimeout(()=>{
-    purchaseMenu.classList.remove('animation-open');
-    },499)
-    
+$(document).ready(function(){
+    $('#shopping-cart').click(function(){
+        $('.purchase-menu')
+        .show()
+        .addClass('animation-open')
+        .delay(500)
+        .queue(function(){
+            $(this).removeClass("animation-open")
+            next();
+        })
+    })
 })
-
 
 //* This adds a click listener to the button which causes is to collapse my purchase menu div.
 
-button.forEach((buttons) =>{
-    buttons.addEventListener('click', ev =>{
-        purchaseMenu.classList.add('animation');
-        setTimeout(()=>{
-            purchaseMenu.style.display= 'none';
-            purchaseMenu.classList.remove('animation');
-        },499);
-    })
-})
+
+
+$(document).ready(function() {
+    $(".close-purchase-menu-span").click(function() { // Use a class selector for the buttons
+      $(".purchase-menu").addClass("animation"); // Add the animation class
+      setTimeout(() => {
+        $(".purchase-menu").hide().removeClass("animation"); // Hide and remove the animation class
+      }, 499); // Wait for 499 milliseconds before hiding
+    });
+  });
+  
 
 //* Create a popup below the hamburger menu.
 
-let canclick = 1;
 
-menu.forEach((menuspan) =>{
-    menuspan.addEventListener('click', ev =>{
-    const menunav = document.createElement('div');
-        if(canclick == 1){
-        menunav.classList.add('menu-nav')
-        menunav.innerHTML = `
-        LOL
-        <br>
-        <br>
-        LOL
-        <br>
-        <br>
-        LOL
-        <br>
-        <br>
-        LOL
-        <br>
-        <br>
-        LOL
-        <br>
-        <br>
-        LOL
-        <br>
-        <br>
-        LOL
-        <br>
-        <br>
-        LOL
-        <br>
-        <br>
-        `
-        mainsection.prepend(menunav);
-        menunav.classList.add('animation-slidein')
-        menu.forEach(span => span.classList.add('test'));
-        menu[0].classList.add('animation-rotate1'); 
-        menu[2].classList.add('animation-rotate2'); 
-        canclick = 0;
-        }
-        
-        //* This closes the menu
-        
-        
-        if(canclick == 0){
-           menu.forEach(span =>{
-            span.addEventListener('click', e =>{
-                menunav.classList.add('animation-slideup');
-                menu[0].classList.remove('animation-rotate1'); 
-                menu[2].classList.remove('animation-rotate2'); 
-                setTimeout(() =>{
-                menunav.remove();
-                menu.forEach(span => span.classList.remove('test'));
-                canclick = 1;
-                })
-            })
-        }) 
-        }
+$(document).ready(function(){
+    $('.menu-span').click(function(){
+        $('.menu-nav').hide
     })
 })
 
+
+let canclick = 1;
+$('.menu-span').click(function() {
+    if (canclick) {
+        const menunav = $('.menu-nav');
+        if (menunav.is(':visible')) {
+            menunav.addClass('animation-slideup');
+            setTimeout(() => {
+                menunav.hide().removeClass('animation-slideup');
+                $('.menu-span').removeClass('test');
+                $('.menu-span:nth-child(1)').removeClass('animation-rotate1');
+                $('.menu-span:nth-child(3)').removeClass('animation-rotate2');
+                canclick = 1;
+            }, 500);
+        } else {
+            menunav.css('display', 'flex').addClass('animation-slidein');
+            $('.menu-span').addClass('test');
+            $('.menu-span:nth-child(1)').addClass('animation-rotate1');
+            $('.menu-span:nth-child(3)').addClass('animation-rotate2');
+            canclick = 0;
+        }
+    }
+});
+
+
+
+// Reset canclick on animation end
+$('.menu-nav').on('animationend', function() {
+    canclick = 1;
+});
 
 //* JQuery part of the code 
 
