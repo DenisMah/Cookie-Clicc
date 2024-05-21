@@ -77,3 +77,4 @@ $('.menu-nav').on('animationend', function() {
 
 //* JQuery part of the code 
 
+HashChangeEvent
