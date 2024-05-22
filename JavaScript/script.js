@@ -24,13 +24,12 @@ $(document).ready(function(){
 //* This adds a click listener to the button which causes is to collapse my purchase menu div.
 
 
-
 $(document).ready(function() {
-    $(".close-purchase-menu-span").click(function() { // Use a class selector for the buttons
-      $(".purchase-menu").addClass("animation"); // Add the animation class
+    $(".close-purchase-menu-span").click(function() {
+      $(".purchase-menu").addClass("animation");
       setTimeout(() => {
-        $(".purchase-menu").hide().removeClass("animation"); // Hide and remove the animation class
-      }, 499); // Wait for 499 milliseconds before hiding
+        $(".purchase-menu").hide().removeClass("animation"); 
+      }, 499); 
     });
   });
   
@@ -68,13 +67,7 @@ $('.menu-span').click(function() {
     }
 });
 
-
-
-// Reset canclick on animation end
 $('.menu-nav').on('animationend', function() {
     canclick = 1;
 });
 
-//* JQuery part of the code 
-
-HashChangeEvent
