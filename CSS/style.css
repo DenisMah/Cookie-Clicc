@@ -113,6 +113,8 @@
 /*This section handles the menu nav */
 
 .menu-nav{
+    padding-top: 30px;
+    text-align: center;
     align-items: center;
     flex-direction: column;
     display: none;
@@ -120,8 +122,27 @@
     overflow-y: auto;
     width: 100%;
     height: 100%;
-    background-color: wheat;
+    background-color: #faf9f6;
+    padding-bottom: 30px;
+}
 
+.menu-nav li{
+    margin: 20px;
+    list-style-type: none;
+}
+
+.menu-nav a{
+    font-family: "Chakra Petch", sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #4a4a4a;
+    line-height: 1.625;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.menu-nav a:hover{
+    text-decoration: underline;
 }
 
 .menuspan-close{
@@ -259,20 +280,16 @@
 }
 
 .image-and-description{
+   
+}
+.image-and-description .image{
+    text-align: right;
+}
+
+.single-product{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rebeccapurple;
-}
-.image-and-description .image{
-    width: 25px;
-    height: 25px;
-    background-color: aqua;
-}
-.image-and-description .description{
-    width: 25px;
-    height: 25px;
-    background-color: goldenrod;
 }
 
 /*Animations classes for transitioning*/
@@ -379,4 +396,15 @@
     100%{
         transform: rotate(-315deg);
     } 
+  }
+
+
+  @keyframes big{
+    0%{
+        scale:100%
+    }
+
+    100%{
+        scale:103%;
+    }
   }

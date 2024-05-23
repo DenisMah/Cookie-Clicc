@@ -71,3 +71,41 @@ $('.menu-nav').on('animationend', function() {
     canclick = 1;
 });
 
+$('.menu-span').click(function(){
+    fetch('JavaScript/items.json')
+    .then((res)=>{
+        return res.json();
+    })
+    .then((data) =>{
+        data.forEach((thing) => {
+            console.log(thing);
+        })
+    })
+    .catch((e) => {
+        console.log(e);
+    })
+})
+
+
+
+$(document).ready(function(){
+    $.getJSON('JavaScript/items.json', function(data){
+        data.forEach((item)=>{
+            const product = document.createElement('div');
+            product.innerHTML = `
+           <div class = "single-product">
+                <div class="image">
+                    <img src="${item.image}" alt="${item.name}">
+                </div>
+                <div class="description">
+                    <h3>${item.name}</h3>
+                    <p>${item.description}</p>
+                </div>
+            </div>
+            `
+            $('.image-and-description').append(product);
+            
+        })
+     
+    })
+})
