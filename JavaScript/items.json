@@ -3,13 +3,13 @@
       "name": "Chocolate Chip Cookies",
       "description": "Classic cookies made with chocolate chips, butter, and brown sugar.",
       "price": 2.50,
-      "image": "chocolate_chip_cookie.jpg"
+      "image": "Images/Chocolate-chip-cookie.jpg"
     },
     {
       "name": "Oatmeal Raisin Cookies",
       "description": "Soft and chewy cookies loaded with oats and plump raisins.",
       "price": 2.00,
-      "image": "oatmeal_raisin_cookie.jpg"
+      "image": "Images/oatmeal_raisin_cookies.jpg"
     },
     {
       "name": "Sugar Cookies",

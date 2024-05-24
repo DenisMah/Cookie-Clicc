@@ -100,6 +100,7 @@ $(document).ready(function(){
                 <div class="description">
                     <h3>${item.name}</h3>
                     <p>${item.description}</p>
+                    haha
                 </div>
             </div>
             `
