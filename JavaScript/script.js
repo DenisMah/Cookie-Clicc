@@ -51,6 +51,7 @@ $('.menu-span').click(function() {
         if (menunav.is(':visible')) {
             menunav.addClass('animation-slideup');
             setTimeout(() => {
+                $(document.body).removeClass('modal-open')
                 menunav.hide().removeClass('animation-slideup');
                 $('.menu-span').removeClass('test');
                 $('.menu-span:nth-child(1)').removeClass('animation-rotate1');
@@ -58,6 +59,7 @@ $('.menu-span').click(function() {
                 canclick = 1;
             }, 500);
         } else {
+            $(document.body).addClass('modal-open');
             menunav.css('display', 'flex').addClass('animation-slidein');
             $('.menu-span').addClass('test');
             $('.menu-span:nth-child(1)').addClass('animation-rotate1');
@@ -100,12 +102,22 @@ $(document).ready(function(){
                 <div class="description">
                     <h3>${item.name}</h3>
                     <p>${item.description}</p>
-                    haha
                 </div>
             </div>
             `
             $('.image-and-description').append(product);
             
+            product.addEventListener('click', ev =>{
+                const productmodal = document.createElement('div');
+                productmodal.classList.add('product-modal');
+                document.body.classList.add("modal-open");
+                productmodal.innerHTML = `
+                <img src = ${item.image}>
+                `
+
+                document.body.append(productmodal);
+      
+            })  
         })
      
     })
