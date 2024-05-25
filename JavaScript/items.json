@@ -13,15 +13,15 @@
     },
     {
       "name": "Sugar Cookies",
-      "description": "Buttery cookies with a hint of vanilla, decorated with colorful sugar sprinkles.",
+      "description": "Buttery cookies, decorated with colorful sugar sprinkles.",
       "price": 1.75,
-      "image": "sugar_cookie.jpg"
+      "image": "Images/sugar-cookies.jpg"
     },
     {
       "name": "Peanut Butter Cookies",
       "description": "Rich and nutty cookies made with creamy peanut butter.",
       "price": 2.00,
-      "image": "peanut_butter_cookie.jpg"
+      "image": "Images/peanut_butter_cookie.jpg"
     }
   ]
   

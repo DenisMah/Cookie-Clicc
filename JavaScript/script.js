@@ -90,35 +90,45 @@ $('.menu-span').click(function(){
 
 
 
+
+
+
 $(document).ready(function(){
     $.getJSON('JavaScript/items.json', function(data){
-        data.forEach((item)=>{
-            const product = document.createElement('div');
-            product.innerHTML = `
-           <div class = "single-product">
-                <div class="image">
-                    <img src="${item.image}" alt="${item.name}">
-                </div>
-                <div class="description">
-                    <h3>${item.name}</h3>
-                    <p>${item.description}</p>
-                </div>
-            </div>
-            `
-            $('.image-and-description').append(product);
-            
-            product.addEventListener('click', ev =>{
-                const productmodal = document.createElement('div');
-                productmodal.classList.add('product-modal');
-                document.body.classList.add("modal-open");
-                productmodal.innerHTML = `
-                <img src = ${item.image}>
-                `
-
-                document.body.append(productmodal);
-      
-            })  
+            for(let a = 0; a < data.length; a++){
+                if(a % 2 == 0){
+                    const product = document.createElement('div');
+                    product.innerHTML = `
+                    <a href = "cookies.html" >
+                   <div class = "single-product">
+                        <div class="image">
+                            <img src="${data[a].image}" alt="${data[a].name}">
+                        </div>
+                        <div class="description">
+                            <h3>${data[a].name}</h3>
+                            <p>${data[a].description}</p>
+                        </div>
+                    </div>
+                    </a>
+                    `
+                    $('.image-and-description').append(product);
+                } else {
+                    const product = document.createElement('div');
+                    product.innerHTML = `
+                    <a href = "cookies.html" >
+                   <div class = "single-product">
+                        <div class="description">
+                            <h3>${data[a].name}</h3>
+                            <p>${data[a].description}</p>
+                        </div>
+                        <div class="image">
+                            <img src="${data[a].image}" alt="${data[a].name}">
+                        </div>
+                    </div>
+                    </a>
+                    `
+                    $('.image-and-description').append(product);
+                }
+            }
         })
-     
-    })
-})
+    });

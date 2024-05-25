@@ -1,0 +1,11 @@
+
+.cookies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cookie {
+    flex: 1 0 30%;
+    box-sizing: border-box;
+    margin: 10px;
+}

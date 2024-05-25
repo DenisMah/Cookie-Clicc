@@ -5,6 +5,7 @@
     margin-bottom: 4rem;
 }
 
+
 #logo{
     width: 128px;
 }
@@ -170,12 +171,16 @@
 
 
 .mainsection{
+    background-size:contain;
+  background-image:url("../Images/Background-Image.jpg");
+    justify-content: center;
+    display: flex;
     position: relative;
     overflow: hidden;
 }
 
 .mainsection img{
-    height: 100%;
+    height: 670px;
     width: 100%;
     object-fit: cover;
 }
@@ -183,16 +188,17 @@
 .mainsection h1{
     text-transform: uppercase;
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%); 
     text-align: center;
     color: white; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .mainsection p{
     position: absolute;
-    top: 29%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%); 
     text-align: center;
@@ -261,19 +267,28 @@
 
 /*Finest section- just a filler section to make the webpage look good*/
 
-
-.finest span{
+.finest{
     margin-top: 3em;
-    width: 1000px;
-    height: 3px;
-    background-color: rgb(252,212,137);
+    margin-bottom: 3em;
+
 }
 
-.finest h2{
+.finest span{
+    background-color: wheat;
+    height: 1px;
+    width:  3000px;;
+}
+
+.finest h2{ 
+    font-size: 37px;
     margin-top: 3em;
     text-align: center
 }
 
+.image-and-description a{
+    text-decoration: none;
+    color: black;
+}
 
 .image img{
     box-shadow: 3px 3px 30px 3px wheat;
@@ -289,7 +304,7 @@
 }
 
 .single-product{
-    margin-top: 1.5em;
+    margin-top: 5em;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -300,7 +315,29 @@ body.modal-open {
     overflow: hidden;
 }
 
+
+/*Our story div*/
+.our-story{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   height: 500px;
+}
+
+.our-story p {
+    margin-top: 30px;
+    text-align: center;
+}
+.our-story h3{
+    text-decoration:  underline black 2px;
+    text-underline-offset: 15px;
+}
+
+
 /* Product modal. When the products gets clicked, a modal opens showcasing the information about it*/
+
+
 
 .product-modal{
     position: fixed;
@@ -312,7 +349,7 @@ body.modal-open {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,1);
 }
 
 /*Animations classes for transitioning*/
