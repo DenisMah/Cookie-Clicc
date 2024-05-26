@@ -1,11 +1,29 @@
 
 .cookies{
+    margin-top: 3em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: orange;
 }
 .cookie {
-    flex: 1 0 30%;
+    max-height: 400px;
+    max-width: 367px;
+    flex: 1 0;
     box-sizing: border-box;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(219, 185, 122);
+}
+
+.cookie{
+    font-family: "Open Sans";
+}
+
+.cookie img{
+    margin-top: 15px;
+    max-width: 320px;
 }

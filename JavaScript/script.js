@@ -94,7 +94,7 @@ $('.menu-span').click(function(){
 
 
 $(document).ready(function(){
-    $.getJSON('JavaScript/items.json', function(data){
+    $.getJSON('JSON/items.json', function(data){
             for(let a = 0; a < data.length; a++){
                 if(a % 2 == 0){
                     const product = document.createElement('div');
