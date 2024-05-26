@@ -1,7 +1,7 @@
 
 
-//Create items from JSON array, and add an event listener for each item where on click they'll show a modal consisting of cookies information, as well as provide the user to buy items. 
-//
+//* Create items from JSON array, and add an event listener for each item where on click they'll show a modal consisting of cookies information, as well as provide the user to buy items. 
+
 $(document).ready(function(){
     $.getJSON('JSON/cookies-items.json', function(data){
         
@@ -15,26 +15,43 @@ $(document).ready(function(){
             `
             $('#cookies').append(items);
 
+
+            //* Create modal on click
             items.addEventListener('click' , ev =>{
                 const itemmodal = document.createElement('div');
                 itemmodal.classList.add('bigModal');
 
                 itemmodal.innerHTML = `
+
+                <div class = "cookie-modal">
                     <div class = "cookie-modal-image">
                         <img src = "${item.image}">
                     </div>
 
           
                     <div class = "cookie-modal-description">
-                        <h4>${item.name}</h4>
-                        <p>${item.price}</p>
+                             <h4>${item.name}</h4>
+                             <p>${item.price}</p>
                         <div class = "cookie-purchase">
                         <p>Choose amount of cookie boxes </p>
                         <input type = "number" min = "1" max = "10" value = "1">
-                        </div>
+                    </div>
+
+                 
                      </div>
+                     <div class = "close-button">
+                     <img src = "Images/close-button.png" id = "close-button">
+                 </div>
+                </div>
+
                 `
                 document.body.append(itemmodal);
+
+                
+                //* Close the modal 
+                $('#close-button').on('click', function(){
+                    itemmodal.remove();
+                })
             })
         })
     })
