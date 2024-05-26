@@ -40,23 +40,31 @@ top:0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: rgba(255,255,255,0.99);
+background-color: rgba(0,0,0,0.99);
 }
 
 .cookie-modal{
+    border-radius: 15px;
+    background-color: white;
     height: 50%;
-    width: 50%;
+    width:50%;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .cookie-modal-image{
-    position: relative;
+position: relative;
  width: 50%;
  display: flex;
 justify-content: center;
 align-items: center;
-background-color: green;
+border-right: 7px solid black;
+}
+
+.cookie-modal-image img{
+    border-radius: 50%;
+    box-shadow: 1px 1px 15px 1px black;
 }
 
 
@@ -73,4 +81,20 @@ background-color: orange;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.close-button img:hover{
+    cursor: pointer;
+}
+
+.close-button{
+    background-color: pink;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 15px;
+}
+
+.close-button img{
+    max-width: 32px;
+    max-height: 32px;
 }

@@ -39,9 +39,11 @@ $(document).ready(function(){
 
                  
                      </div>
+               
                      <div class = "close-button">
                      <img src = "Images/close-button.png" id = "close-button">
                  </div>
+
                 </div>
 
                 `

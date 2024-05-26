@@ -3,37 +3,37 @@
       "name": "Chocolate Chip Cookies",
       "description": "Classic cookies made with chocolate chips, butter, and brown sugar.",
       "price": 2.50,
-      "image": "Images/Chocolate-chip-cookie.jpg"
+      "image": "Images/Cookies/Chocolate-chip-cookie.jpg"
     },
     {
       "name": "Oatmeal Raisin Cookies",
       "description": "Soft and chewy cookies loaded with oats and plump raisins.",
       "price": 2.00,
-      "image": "Images/oatmeal_raisin_cookies.jpg"
+      "image": "Images/Cookies/oatmeal_raisin_cookies.jpg"
     },
     {
       "name": "Sugar Cookies",
       "description": "Buttery cookies, decorated with colorful sugar sprinkles.",
       "price": 1.75,
-      "image": "Images/sugar-cookies.jpg"
+      "image": "Images/Cookies/sugar-cookies.jpg"
     },
     {
       "name": "Peanut Butter Cookies",
       "description": "Rich and nutty cookies made with creamy peanut butter.",
       "price": 2.00,
-      "image": "Images/peanut_butter_cookie.jpg"
+      "image": "Images/Cookies/peanut_butter_cookie.jpg"
     },
     {
         "name": "White Chocolate Nut Cookies",
         "description": "Delicious cookies loaded with white chocolate chips and macadamia nuts.",
         "price": 3.00,
-        "image": "Images/white-cookie.jpg"
+        "image": "Images/Cookies/white-cookie.jpg"
       },
       {
         "name": "Snickerdoodle Cookies",
         "description": "Soft and chewy cookies coated in cinnamon sugar.",
         "price": 2.25,
-        "image": "Images/snickerdoodle-cookies.jpg"
+        "image": "Images/Cookies/snickerdoodle-cookies.jpg"
       }
   ]
   

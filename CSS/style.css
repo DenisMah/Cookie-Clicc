@@ -183,6 +183,7 @@
     height: 670px;
     width: 100%;
     object-fit: cover;
+    filter: blur(3px);
 }
 
 .mainsection h1{
