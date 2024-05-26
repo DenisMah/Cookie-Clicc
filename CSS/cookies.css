@@ -27,3 +27,36 @@
     margin-top: 15px;
     max-width: 320px;
 }
+
+
+.bigModal{
+ z-index: 1;
+display: flex;
+justify-content: space-around;
+flex-direction: row;
+position:  fixed;
+top: 25%;
+left: 25%;
+width: 50%;
+height: 50%;
+background-color: rgba(255,255,255,0.99);
+}
+
+
+.cookie-modal-image{
+    position: relative;
+ width: 50%;
+ display: flex;
+justify-content: center;
+align-items: center;
+background-color: green;
+}
+
+
+.cookie-modal-description{
+display: flex;
+flex-direction: column;
+justify-content:center;
+align-items: center;
+background-color: orange;
+}

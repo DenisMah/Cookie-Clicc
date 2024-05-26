@@ -91,7 +91,7 @@ $('.menu-span').click(function(){
 
 
 
-
+//* Create cookies, load items from a JSON array etc.
 
 $(document).ready(function(){
     $.getJSON('JSON/items.json', function(data){
