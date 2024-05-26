@@ -60,3 +60,10 @@ justify-content:center;
 align-items: center;
 background-color: orange;
 }
+
+.cookie-purchase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

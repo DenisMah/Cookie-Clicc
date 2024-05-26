@@ -23,9 +23,15 @@ $(document).ready(function(){
                     <div class = "cookie-modal-image">
                         <img src = "${item.image}">
                     </div>
+
+          
                     <div class = "cookie-modal-description">
                         <h4>${item.name}</h4>
                         <p>${item.price}</p>
+                        <div class = "cookie-purchase">
+                        <p>Choose amount of cookie boxes </p>
+                        <input type = "number" min = "1" max = "10" value = "1">
+                        </div>
                      </div>
                 `
                 document.body.append(itemmodal);
