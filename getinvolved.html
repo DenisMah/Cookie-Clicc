@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/get-involved.css">
     <link rel="stylesheet" href="CSS/style.css">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    
     <title>Cookie-Clicc</title>
 </head>
 <body>
@@ -28,6 +28,7 @@
             <!--This section is the logo part-->
             <div class="navigation-item">
                 <a href="index.html">
+                    
                     <img src="Images/Assets/Brown Cute Cookies Logo.png" alt="" id="logo">
                 </a>
             </div>
@@ -51,37 +52,37 @@
         </ul>
     </div>
 
-    <div class="mainsection">
-        <img src="Images/People/bakery.jpg" alt="" id = "bakery-video">
+    <div class="mainsection" id = "mainsection-video">
+        <div class = "question-div">
+            <h1>Ready to begin your baking career?</h1>
+            <button>Start Now</button>
+        </div>
+        <img  src="Images/People/bakery.jpg" alt="" id="bakery-video">
     </div>
 
-
-
-    <div class="get-involved">
-        <div class="container">
-            <h2 class="title">Registration</h2>
-            <form action="#" name="registration">
-                <label for="firstname">First Name</label>
-                <input type="text" name="firstname" id="firstname" placeholder="John">
-        
-                <label for="lastname">Last Name</label>
-                <input type="text" name="lastname" id="lastname" placeholder="Doe">
-        
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="john@doe.com">
-        
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;">
-        
-                <button type="submit">Register</button>
-            </form>
+    <div class="container">
+        <div class="information">
+            <div class="experiences">
+                <h2>Get to know us!</h2>
+                
+             <div class="ourpeople" id = "our-people">
+               
+             </div>
+            </div>
+            <div class="getstarted">
+                <h3>GET STARTED!</h3>
+            </div>
         </div>
     </div>
 
+   
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="https://malsup.github.io/jquery.blockUI.js"></script>
     <script src="JavaScript/get-involved.js"></script>
     <script src="JavaScript/script.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

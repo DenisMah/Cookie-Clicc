@@ -1,38 +1,209 @@
-#bakery-video{
-    filter: blur(3px);
+.getstarted{
+    display: flex;
+    justify-content: flex-end;
 }
 
 
-form {
-    padding: 20px;
-    background: #2c3e50;
-    color: #fff;
-    border-radius: 4px;
+
+#mainsection-video{
+    position: relative;
 }
-form label,
-form input,
-form button {
-    border: 0;
-    margin-bottom: 3px;
-    display: block;
+
+#mainsection-video .question-div{
+    top:30%;
+    z-index: 1;
+    position: absolute;
+    width: 1000px;
+    height: 300px;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#mainsection-video .question-div h1{
+    color:  black;
+}
+
+
+#mainsection-video .question-div button{
+    padding: 15px 50px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 15px 1px wheat;
+    border: none;
+    background-color: wheat;
+    text-transform: uppercase;
+}
+
+
+#mainsection-video .question-div button:hover{
+    scale: 110%;
+}
+
+.registration-form{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: rgb(253, 208, 124);
+    border-radius: 15px;
+    width: 50%;
+    top:25%;
+    left: 25%;
+    position: fixed;
+}
+
+.information{
+    margin-top: 10em;
+    display: flex;
+    flex-direction:column;
+}
+
+.experiences{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
+}
+
+.ourpeople{
+    border-top: 1.5px solid black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#element-name{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.person{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person img{
+    width: 120px;
+}
+.person p{
+    font-size: 15px;
+}
+
+.person img{
+    border-radius: 50%;
+}
+
+
+
+.areyouready{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bigmodal{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: white;
 }
-form input {
-    height: 25px;
-    line-height: 25px;
-    background: #fff;
-    color: #000;
-    padding: 0 6px;
-    box-sizing: border-box;
+
+.login-box img{
+    position: fixed;
+    top:0;
+    right: 0;;
+    width: 25px;
 }
-form button {
-    height: 30px;
-    line-height: 30px;
-    background: #e67e22;
-    color: #fff;
-    margin-top: 10px;
+
+.login-box img:hover{
     cursor: pointer;
 }
-form .error {
-    color: #ff0000;
-}
+
+html {
+    height: 100%;
+  }
+  
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    z-index: 2;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  
+  .login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    cursor: pointer;
+  }
+  
+  .login-box form a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+  }
+  

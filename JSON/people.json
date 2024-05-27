@@ -1,0 +1,22 @@
+[
+    {
+        "name":"Gordon Ramsay",
+        "description":"When I'm not harassing people in Great Britain, I come to International Burch University to bake cookies!",
+        "image":"Images/People/gordon-r.png"
+    },
+    {
+        "name":"Beyonce",
+        "description":" 'I married an ugly looking guy because he knew how to bake amazing cookies! So you better learn how to bake!",
+        "image": "Images/People/beyonce.png"
+    },
+    {
+        "name":"Shaquille O' Neal",
+        "description":"Want to know how I got so tall? I ate a whole lotta cookies from Burch! Now eat if you wanna get strong!",
+        "image": "Images/People/shaq.png"
+    },
+    {
+        "name":"Mark Zuckerberg",
+        "description": "Burch cookies are the only edible thing humans and lizards have in common. They're even tastier than babies.",
+        "image": "Images/People/mark.png"
+    }
+]
