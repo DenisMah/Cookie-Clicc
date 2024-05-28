@@ -73,7 +73,9 @@
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     display: none;
-    background-color: wheat;
+    background-color: #faf9f6;
+    
+    border-left:  3px solid black;
     top: 0;
     right: 0;
     height: 100%;
@@ -354,6 +356,10 @@ body.modal-open {
 }
 
 /*Animations classes for transitioning*/
+
+.blur{
+    filter: blur(5px);
+}
 
 .animation{
     animation: popUp 0.5s ease;

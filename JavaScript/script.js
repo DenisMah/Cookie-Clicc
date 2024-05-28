@@ -18,6 +18,8 @@ $(document).ready(function(){
             $(this).removeClass("animation-open")
             next();
         })
+        $(document.body).addClass('modal-open');
+        $(mainsection).addClass('blur');
     })
 })
 
@@ -26,6 +28,8 @@ $(document).ready(function(){
 
 $(document).ready(function() {
     $(".close-purchase-menu-span").click(function() {
+        $(mainsection).removeClass('blur');
+        $(document.body).removeClass('modal-open');
       $(".purchase-menu").addClass("animation");
       setTimeout(() => {
         $(".purchase-menu").hide().removeClass("animation"); 
@@ -132,3 +136,5 @@ $(document).ready(function(){
             }
         })
     });
+
+2
