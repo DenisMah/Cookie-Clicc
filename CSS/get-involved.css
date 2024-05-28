@@ -28,6 +28,7 @@
 
 #mainsection-video .question-div h1{
     color:  black;
+    font-family: 'Lora"';
 }
 
 
@@ -68,34 +69,43 @@
 }
 
 #content-description{
+    color: black;
+    font-family: 'Lora';
     font-size: 20px;
     margin-bottom: 25px;
 }
 
 .experiences{
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content:center;
     flex-direction: column;
-    text-align: left;
+    text-align:center;
 }
 
-
+.experiences h1{
+    font-size: 64px;
+    font-family: "Pacifico";
+ 
+}
 
 .ourpeople{
-    border-top: 1.5px solid black;
+    border-radius: 50px;
+    border-top: 15px solid  #ffc76b;
+    border-bottom: 15px solid #ffb347;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
 }
 
 #element-name{
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .person{
-background-color: #faf9f6;;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,11 +113,13 @@ background-color: #faf9f6;;
 
 .person img{
     width: 120px;
-    box-shadow: 1px 1px 25px 1px black;
+
 }
 .person p{
+    font-style: italic;
+    color: black;
     margin-top:25px;
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
 }
 
@@ -115,14 +127,11 @@ background-color: #faf9f6;;
     border-radius: 50%;
 }
 
-
-
 .areyouready{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 .bigmodal{
     position: fixed;
@@ -133,3 +142,6 @@ background-color: #faf9f6;;
     background-color: white;
 }
 
+.big-letter {
+    transition: font-size 0.5s, color 0.5s;
+}

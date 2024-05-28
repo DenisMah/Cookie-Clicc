@@ -181,6 +181,13 @@
     overflow: hidden;
 }
 
+.mainsection video{
+    height: 670px;
+    width: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+}
+
 .mainsection img{
     height: 670px;
     width: 100%;
@@ -299,11 +306,37 @@
 }
 
 .description{
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.description h3{
+
+    font-family: 'Lora';
+}
+
+.description:nth-of-type(odd){
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border-left: 3px dashed black;
+    border-radius: 50%;
+}
+
+.description:nth-of-type(even){
+
+    border-right: 3px dashed black;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .single-product{
