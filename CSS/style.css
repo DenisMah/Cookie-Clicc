@@ -7,6 +7,7 @@
 
 
 #logo{
+    height: 128px;
     width: 128px;
 }
 
@@ -306,7 +307,6 @@
 }
 
 .description{
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -320,7 +320,7 @@
 }
 
 .description:nth-of-type(odd){
-
+    padding-left: 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -330,7 +330,7 @@
 }
 
 .description:nth-of-type(even){
-
+    padding-right: 15px;
     border-right: 3px dashed black;
     border-radius: 100%;
     display: flex;

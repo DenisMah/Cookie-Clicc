@@ -88,7 +88,7 @@ $('.menu-span').click(function(){
         })
     })
     .catch((e) => {
-        console.log(e);
+        console.log(e);21
     })
 })
 
@@ -137,4 +137,4 @@ $(document).ready(function(){
         })
     });
 
-2
+

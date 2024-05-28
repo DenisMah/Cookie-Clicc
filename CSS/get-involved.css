@@ -5,7 +5,17 @@
 }
 
 .getstarted h1{
-    margin-top: 100px;
+    font-family: "Pacifico";
+    font-size: 64px;
+    margin-top:100px;
+}
+
+.getstarted p {
+    text-align: end;
+    color: black;
+    font-family: 'Lora';
+    font-size: 18px;
+    margin-bottom: 25px;
 }
 
 
@@ -90,6 +100,7 @@
 }
 
 .ourpeople{
+    margin-top: 100px;
     border-radius: 50px;
     border-top: 15px solid  #ffc76b;
     border-bottom: 15px solid #ffb347;
@@ -142,6 +153,46 @@
     background-color: white;
 }
 
-.big-letter {
-    transition: font-size 0.5s, color 0.5s;
+.faq{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
+
+.accordion{
+    padding:10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color:  #ffb347;
+    width: 600px;
+}
+
+.accordion_question{
+    background-color: green;
+}
+
+.accordion_question p{
+    font-size: 28px;
+    font-family: 'Lora';
+
+}
+
+.answer{
+    font-size: 15px;;
+}
+
+.pop{
+    animation: 1s pop ease;
+}
+
+@keyframes pop {
+   0%{
+    opacity: 100%;
+   } 
+
+   100%{
+    opacity: 0%;;
+   }
+}  
