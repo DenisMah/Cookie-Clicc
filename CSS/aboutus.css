@@ -4,6 +4,12 @@
     align-items: flex-end;
 }
 
+.spanny{
+    background-color: black;    
+}
+
+
+
 .getstarted h1{
     font-family: "Pacifico";
     font-size: 64px;
@@ -17,6 +23,8 @@
     font-size: 18px;
     margin-bottom: 25px;
 }
+
+
 
 
 #mainsection-video{
@@ -154,29 +162,59 @@
 }
 
 .faq{
+
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+
+    justify-content: flex-start;
+    align-items:flex-start;
+}
+
+.faq h1{
+    font-family: 'Pacifico';
+    margin-bottom: 50px;
 }
 
 .accordion{
     padding:10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color:  #ffb347;
-    width: 600px;
+    background-color: none;;
+
+}
+
+.accordion:hover{
+    cursor: pointer;
+}
+
+
+.answer{
+    display: none;
+    border-bottom: 1px solid black;
+
+}
+
+.accordion.active .answer{
+    display: block;
 }
 
 .accordion_question{
-    background-color: green;
+    display: flex;;
+    flex-direction: row-reverse;
+    background:none;
+    
+}
+
+.accordion_question img{
+    margin-left: 25px;
+    width: 15px;
+    height: 15px;;
 }
 
 .accordion_question p{
     font-size: 28px;
     font-family: 'Lora';
-
+    text-decoration: underline 3px;
+    text-underline-offset: 10px;
 }
 
 .answer{

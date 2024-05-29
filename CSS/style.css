@@ -398,6 +398,13 @@ body.modal-open {
     animation: popUp 0.5s ease;
 }
 
+
+
+iframe {
+    height: 450px;
+    width: 600px;
+}
+
 /* ^ This one closes. And this one opens V */
 
 .animation-open{

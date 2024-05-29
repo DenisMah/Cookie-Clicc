@@ -56,13 +56,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-let answers = document.querySelectorAll(".accordion");
-answers.forEach((event) => {
-    event.addEventListener("click", () => {
-        if (event.classList.contains("active")) {
-            event.classList.remove("active");
+const accordion= document.querySelectorAll('.accordion');
+
+accordion.forEach((item) => {
+    item.addEventListener('click', ev => {
+        if(item.classList.contains('active')){
+            item.classList.remove('active');
         } else {
-            event.classList.add("active");
+            item.classList.add('active');2
         }
-    });
+    })
+});
+
+
+const spanny = document.getElementsByClassName('spanny');
+let isclicked = 0;
+
+$(spanny).on('click', function(){
+    console.log('click');
+
+    if(isclicked === 0){
+        console.log('123?');
+        $(spanny).css('background-color', 'white');
+        isclicked = 1;
+    } else {
+        $(spanny).css('background-color', 'black');
+        isclicked = 0;
+    }
 });
