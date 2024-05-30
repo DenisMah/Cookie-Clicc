@@ -6,6 +6,8 @@
   width: 100%;
 }
 
+
+
 .form {
   border-radius: 30px;
   border: 2px solid rgb(26, 25, 25);
@@ -61,10 +63,10 @@
 
 .gender-female {
   width: 50%;
-  background-color: pink;
 }
 
 .gender-choices {
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -89,6 +91,55 @@
   font-size: 20px;
 }
 
-body {
-  margin: 0;
+.submit button{
+  margin-top: 100px;
+  padding: 25px 75px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: none; /* Initial box shadow */
+  transition: box-shadow 0.5s ease-in-out; /* Apply transition */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.submit button:hover{
+  transition: .5s ease-in-out;
+  box-shadow: 1px 1px 15px 1px black;
+}
+
+.submit button::after{
+  transition: .5s ease-in-out;
+}
+
+.form-group h4{
+  margin-top: 20px;
+font-family: "Dancing Script";
+
+}
+
+.form-group textarea {
+  margin-top: 20px;
+  border-radius: 15px;
+  border-color: white;
+outline: none;
+text-align: center;
+font-family: "Dancing Script";
+}
+
+.goback{
+  margin-top: 15px;
+}
+
+.goback a{
+  margin-top: 15px;
+  color: black;
+  text-decoration: none;
 }
