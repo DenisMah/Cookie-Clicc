@@ -6,8 +6,6 @@
   width: 100%;
 }
 
-
-
 .form {
   border-radius: 30px;
   border: 2px solid rgb(26, 25, 25);
@@ -91,7 +89,7 @@
   font-size: 20px;
 }
 
-.submit button{
+.submit button {
   margin-top: 100px;
   padding: 25px 75px;
   border-radius: 25px;
@@ -102,43 +100,42 @@
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.submit button:hover{
-  transition: .5s ease-in-out;
+.submit button:hover {
+  transition: 0.5s ease-in-out;
   box-shadow: 1px 1px 15px 1px black;
 }
 
-.submit button::after{
-  transition: .5s ease-in-out;
+.submit button::after {
+  transition: 0.5s ease-in-out;
 }
 
-.form-group h4{
+.form-group h4 {
   margin-top: 20px;
-font-family: "Dancing Script";
-
+  font-family: "Dancing Script";
 }
 
 .form-group textarea {
   margin-top: 20px;
   border-radius: 15px;
   border-color: white;
-outline: none;
-text-align: center;
-font-family: "Dancing Script";
+  outline: none;
+  text-align: center;
+  font-family: "Dancing Script";
 }
 
-.goback{
+.goback {
   margin-top: 15px;
 }
 
-.goback a{
+.goback a {
   margin-top: 15px;
   color: black;
   text-decoration: none;

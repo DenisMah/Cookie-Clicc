@@ -1,100 +1,120 @@
-
-.cookies{
-    margin-top: 3em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: orange;
+.cookies {
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
 .cookie {
-    max-height: 400px;
-    max-width: 367px;
-    flex: 1 0;
-    box-sizing: border-box;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(219, 185, 122);
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+  max-height: 400px;
+  max-width: 367px;
+  flex: 1 0;
+  box-sizing: border-box;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.cookie{
-    font-family: "Open Sans";
+.cookie {
+  font-family: "Open Sans";
 }
 
-.cookie img{
-    margin-top: 15px;
-    max-width: 320px;
+.cookie p {
+  font-weight: 900;
 }
 
-
-.bigModal{
- z-index: 1;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: row;
-position:  fixed;
-top:0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0,0,0,0.99);
+.cookie img {
+  margin-top: 15px;
+  max-width: 320px;
+  border-radius: 25px;
 }
 
-.cookie-modal{
-    border-radius: 15px;
-    background-color: white;
-    height: 50%;
-    width:50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.cookie h4 {
+  font-weight: 900;
+  margin-top: 20px;
+  font-size: 15px;
 }
 
-.cookie-modal-image{
-position: relative;
- width: 50%;
- display: flex;
-justify-content: center;
-align-items: center;
-border-right: 7px solid black;
+.bigModal {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.99);
 }
 
-.cookie-modal-image img{
-    border-radius: 50%;
-    box-shadow: 1px 1px 15px 1px black;
+.cookie-modal {
+  box-shadow: 1px 1px 3px 50px white;
+  font-family: "Dancing Script";
+  border-radius: 15px;
+  background-color: white;
+  height: 50%;
+  width: 50%;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-
-.cookie-modal-description{
-display: flex;
-flex-direction: column;
-justify-content:center;
-align-items: center;
-background-color: orange;
+.cookie-modal-image {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.cookie-purchase{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.cookie-modal-image img {
+  border-radius: 50%;
+  box-shadow: 1px 1px 15px 1px black;
 }
 
-.close-button img:hover{
-    cursor: pointer;
+.cookie-modal-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.close-button{
-    background-color: pink;
-    display: flex;
-    justify-content: flex-end;
-    border-radius: 15px;
+.cookie-purchase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.close-button img{
-    max-width: 32px;
-    max-height: 32px;
+.close-button img:hover {
+  cursor: pointer;
+}
+
+.close-button {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 15px;
+}
+
+.close-button img {
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.purchase-button button {
+  margin-top: 50px;
+  background: none;
+}
+
+.cart {
+  background-color: red;
+  height: 125px;
+  width: 50px;
 }
