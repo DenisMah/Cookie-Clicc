@@ -114,7 +114,13 @@
 }
 
 .cart {
+  display: flex;
+  margin-top: 150px;
   background-color: red;
   height: 125px;
   width: 50px;
+}
+
+.button-remove {
+  padding: auto;
 }
