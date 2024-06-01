@@ -116,9 +116,10 @@
 .cart {
   display: flex;
   margin-top: 150px;
+  flex-direction: column;
   background-color: red;
   height: 125px;
-  width: 50px;
+  width: 80%;
 }
 
 .button-remove {

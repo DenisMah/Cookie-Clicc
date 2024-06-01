@@ -66,18 +66,29 @@ $(document).ready(function () {
             modaldiv.remove();
             toastr.success("Thanks for the purchase!");
             localStorage.setItem(`  ${id} ${dataitem.name}`, value);
-
-            const div = document.createElement("div");
-
-            div.innerHTML = `
-            ${dataitem.name}
-            `;
-            div.classList.add("cart");
-
-            $("#purchase-menu").append(div);
+            renderPurchases();
           });
         });
       });
     },
   });
 });
+
+const renderPurchases = () => {
+  const pmenu = document.querySelector("#purchase-menu");
+  pmenu.innerHTML = `
+  <span class="close-purchase-menu-span"></span
+  ><span class="close-purchase-menu-span"></span>
+  `;
+  for (let i = 0; i < localStorage.length; i++) {
+    const div = document.createElement("div");
+    div.innerHTML = `
+    <div class = "cart">
+    <p>ID: ${localStorage.key(i)}</p>
+    <p>Quantity: ${localStorage.getItem(localStorage.key(i))}</p>
+    </div>
+    `;
+
+    $("#purchase-menu").append(div);
+  }
+};

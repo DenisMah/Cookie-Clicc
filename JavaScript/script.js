@@ -9,6 +9,7 @@ const mainsection = document.querySelector(".mainsection");
 //* Hide the purchase menu on startup
 
 $(document).ready(function () {
+  renderPurchases();
   $("#purchase-menu").hide();
 });
 
