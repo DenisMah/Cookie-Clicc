@@ -1,16 +1,7 @@
-//TODO
-
-//! Create items on the page and add them to the LocalStorage, creating a button to remove each item from the local storage.
-
-//? Firstly load all the items from my JSON Array using fetch
-//? Second, load the items on my page
-//? Create modals for each product using forEach loop
-//? Add the item to the localStorage & it's quantity
-//? Load the purchase-menu div for each item in the localstorage
-//?
-
+//? ID is here so that the localStorage can create mutliple objects of the same quantity.
 let id = 0;
 
+//* When the document is ready, load the data from the cookies-items JSON and load it to the page.
 $(document).ready(function () {
   $.ajax({
     url: "JSON/cookies-items.json",
@@ -20,7 +11,7 @@ $(document).ready(function () {
       data.forEach((dataitem) => {
         const cookiediv = document.createElement("div");
         cookiediv.innerHTML = `
-        <img src = "${dataitem.image}">
+        <img src="${dataitem.image}">
         <h4>${dataitem.name}</h4>
         <p>${dataitem.price}</p>
         `;
@@ -32,16 +23,17 @@ $(document).ready(function () {
           const modaldiv = document.createElement("div");
           modaldiv.classList.add("bigModal");
           modaldiv.innerHTML = `
-            <div class = "cookie-modal"> 
-                <div class = "cookie-modal-image">
-                    <img src = "${dataitem.image}">
+            <div class="cookie-modal"> 
+                <div class="cookie-modal-image">
+                    <img src="${dataitem.image}">
+                    <button><a href = "product.html"> VIEW MORE </a></button>
                 </div>
-                <div class = "cookie-modal-description">
-                        <p> ${dataitem.name}</p>
-                        <p> ${dataitem.price} $</p>
-                        <button id = "button-purchase">Purchase</button>
-                        <input type = "number" id = "cookieamount" min = "1" max = "10" placeholder = "Enter cookie amount" value = "1">  
-                        <button id = "button-close">CLOSE</button>
+                <div class="cookie-modal-description">
+                        <p>${dataitem.name}</p>
+                        <p>${dataitem.price} $</p>
+                        <button id="button-purchase">Purchase</button>
+                        <input type="number" id="cookieamount" min="1" max="10" placeholder="Enter cookie amount" value="1">  
+                        <button id="button-close">CLOSE</button>
                 </div> 
             </div>
           `;
@@ -57,15 +49,13 @@ $(document).ready(function () {
           value.addEventListener("input", (e) => {
             value = e.target.value;
           });
-
           value = $("#cookieamount").val();
-          dataitem.quantity = value;
           const button = document.getElementById("button-purchase");
 
           button.addEventListener("click", () => {
             modaldiv.remove();
             toastr.success("Thanks for the purchase!");
-            localStorage.setItem(`  ${id} ${dataitem.name}`, value);
+            localStorage.setItem(`${id} ${dataitem.name}`, value);
             renderPurchases();
           });
         });
@@ -74,21 +64,50 @@ $(document).ready(function () {
   });
 });
 
+//* Function that renders the purchases from the localStorage.
 const renderPurchases = () => {
   const pmenu = document.querySelector("#purchase-menu");
   pmenu.innerHTML = `
-  <span class="close-purchase-menu-span"></span
-  ><span class="close-purchase-menu-span"></span>
+  <span class="close-purchase-menu-span"></span>
+  <span class="close-purchase-menu-span"></span>
   `;
-  for (let i = 0; i < localStorage.length; i++) {
+
+  //*Loop through each object in the localStorage and render them on the purchase menu.
+  Object.keys(localStorage).forEach((key) => {
     const div = document.createElement("div");
     div.innerHTML = `
-    <div class = "cart">
-    <p>ID: ${localStorage.key(i)}</p>
-    <p>Quantity: ${localStorage.getItem(localStorage.key(i))}</p>
+    <div class="cart">
+      <p>ID: ${key}</p>
+      <p>Quantity: ${localStorage.getItem(key)}</p>
+
+      <div class = "minusiplus">
+      <p class="decrease"> - </p>
+      <p class="increase"> + </p> 
+      </div>
+   
     </div>
     `;
 
     $("#purchase-menu").append(div);
-  }
+
+    //* Event listeners for increasing and decreasing the amount ordered.
+
+    //*Decrease the amount ordered
+    div.querySelector(".decrease").addEventListener("click", () => {
+      let currentQuantity = parseInt(localStorage.getItem(key));
+      if (currentQuantity > 1) {
+        localStorage.setItem(key, currentQuantity - 1);
+      } else {
+        localStorage.removeItem(key);
+      }
+      renderPurchases();
+    });
+
+    //* Increase the amount ordered
+    div.querySelector(".increase").addEventListener("click", () => {
+      let currentQuantity = parseInt(localStorage.getItem(key));
+      localStorage.setItem(key, currentQuantity + 1);
+      renderPurchases();
+    });
+  });
 };

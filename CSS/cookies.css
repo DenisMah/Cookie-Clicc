@@ -114,14 +114,27 @@
 }
 
 .cart {
+  border: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   display: flex;
   margin-top: 150px;
   flex-direction: column;
-  background-color: red;
-  height: 125px;
-  width: 80%;
+  align-items: center;
+  background-color: #ffb347;
+  height: 120px;
+  width: 90%;
+  font-family: "Pacifico";
 }
 
 .button-remove {
   padding: auto;
+}
+
+.minusiplus {
+  width: 100%;
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+  font-size: 25px;
 }

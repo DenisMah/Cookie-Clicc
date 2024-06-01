@@ -69,9 +69,6 @@
 .purchase-menu {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-  display: flex;
-  flex-direction: column;
-
   background-color: #faf9f6;
   border-left: 3px solid black;
   top: 0;
