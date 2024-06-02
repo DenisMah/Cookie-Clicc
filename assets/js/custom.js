@@ -7,7 +7,10 @@ $(document).ready(function () {
 
   app.route({
     view: "view_home",
-    load: "indexxx.html",
+    load: "index1.html",
+    onCreate: function () {
+      $("purchase-menu").hide();
+    },
   });
 
   app.route({

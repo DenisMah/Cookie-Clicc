@@ -34,6 +34,11 @@
   cursor: pointer;
 }
 
+.navigation-item img {
+  height: 32px;
+  width: 32px;
+}
+
 .menu-span {
   top: 65%;
   height: 3px;

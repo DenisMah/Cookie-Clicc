@@ -17,7 +17,6 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $("#shopping-cart").click(function () {
-    console.log("123");
     $(".purchase-menu")
       .show()
       .addClass("animation-open")
@@ -49,12 +48,6 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".menu-span").click(function () {
     $(".menu-nav").hide;
-  });
-});
-
-$(document).ready(function () {
-  $(".navigation-item").on("click", function (e) {
-    console.log("123");
   });
 });
 
@@ -104,41 +97,48 @@ $(".menu-span").click(function () {
 });
 
 //* Create cookies, load items from a JSON array etc.
-
-$.getJSON("Cookie-Clicc-SPAPP/JSON/items.json", function (data) {
-  for (let a = 0; a < data.length; a++) {
-    if (a % 2 == 0) {
+$(document).ready(function () {
+  $.getJSON("../assets/JSON/items.json", function (data) {
+    for (let a = 0; a < data.length; a++) {
       const product = document.createElement("div");
-      product.innerHTML = `
-                    <a href = "cookies.html" >
-                   <div class = "single-product">
-                        <div class="image">
-                            <img src="${data[a].image}" alt="${data[a].name}">
-                        </div>
-                        <div class="description">
-                            <h3>${data[a].name}</h3>
-                            <p>${data[a].description}</p>
-                        </div>
-                    </div>
-                    </a>
-                    `;
-      $(".image-and-description").append(product);
-    } else {
-      const product = document.createElement("div");
-      product.innerHTML = `
-                    <a href = "cookies.html" >
-                   <div class = "single-product">
-                        <div class="description">
-                            <h3>${data[a].name}</h3>
-                            <p>${data[a].description}</p>
-                        </div>
-                        <div class="image">
-                            <img src="${data[a].image}" alt="${data[a].name}">
-                        </div>
-                    </div>
-                    </a>
-                    `;
+      if (a % 2 == 0) {
+        product.innerHTML = `
+          <a href="../tpl/cookies.html">
+            <div class="single-product">
+              <div class="image">
+                <img src="${data[a].image}" alt="${data[a].name}">
+              </div>
+              <div class="description">
+                <h3>${data[a].name}</h3>
+                <p>${data[a].description}</p>
+              </div>
+            </div>
+          </a>
+        `;
+      } else {
+        product.innerHTML = `
+          <a href="../tpl/cookies.html">
+            <div class="single-product">
+              <div class="description">
+                <h3>${data[a].name}</h3>
+                <p>${data[a].description}</p>
+              </div>
+              <div class="image">
+                <img src="${data[a].image}" alt="${data[a].name}">
+              </div>
+            </div>
+          </a>
+        `;
+      }
       $(".image-and-description").append(product);
     }
-  }
+  });
 });
+
+const what = () => {
+  $.getJSON("../assets/JSON/items.json", function (data) {
+    data.forEach((item) => {
+      console.log(item);
+    });
+  });
+};

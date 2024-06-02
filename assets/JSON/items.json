@@ -1,27 +1,26 @@
 [
-    {
-      "name": "Chocolate Chip Cookies",
-      "description": "Classic cookies made with chocolate chips, butter, and brown sugar.",
-      "price": 2.50,
-      "image": "assets/Images/Cookies/Chocolate-chip-cookie.jpg"
-    },
-    {
-      "name": "Oatmeal Raisin Cookies",
-      "description": "Soft and chewy cookies loaded with oats and plump raisins.",
-      "price": 2.00,
-      "image": "assets/Images/Cookies/oatmeal_raisin_cookies.jpg"
-    },
-    {
-      "name": "Sugar Cookies",
-      "description": "Buttery cookies, decorated with colorful sugar sprinkles.",
-      "price": 1.75,
-      "image": "assets/Images/Cookies/sugar-cookies.jpg"
-    },
-    {
-      "name": "Peanut Butter Cookies",
-      "description": "Rich and nutty cookies made with creamy peanut butter.",
-      "price": 2.00,
-      "image": "assets/Images/Cookies/peanut_butter_cookie.jpg"
-    }
-  ]
-  
+  {
+    "name": "Chocolate Chip Cookies",
+    "description": "Classic cookies made with chocolate chips, butter, and brown sugar.",
+    "price": 2.50,
+    "image": "../assets/Images/Cookies/Chocolate-chip-cookie.jpg"
+  },
+  {
+    "name": "Oatmeal Raisin Cookies",
+    "description": "Soft and chewy cookies loaded with oats and plump raisins.",
+    "price": 2.00,
+    "image": "../assets/Images/Cookies/oatmeal_raisin_cookies.jpg"
+  },
+  {
+    "name": "Sugar Cookies",
+    "description": "Buttery cookies, decorated with colorful sugar sprinkles.",
+    "price": 1.75,
+    "image": "../assets/Images/Cookies/sugar-cookies.jpg"
+  },
+  {
+    "name": "Peanut Butter Cookies",
+    "description": "Rich and nutty cookies made with creamy peanut butter.",
+    "price": 2.00,
+    "image": "../assets/Images/Cookies/peanut_butter_cookie.jpg"
+  }
+]

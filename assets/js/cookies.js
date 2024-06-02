@@ -4,14 +4,14 @@ let id = 0;
 //* When the document is ready, load the data from the cookies-items JSON and load it to the page.
 $(document).ready(function () {
   $.ajax({
-    url: "JSON/cookies-items.json",
+    url: "../assets/JSON/cookies-items.json",
     method: "GET",
     dataType: "json",
     success: function (data) {
       data.forEach((dataitem) => {
         const cookiediv = document.createElement("div");
         cookiediv.innerHTML = `
-        <img src="${dataitem.image}">
+        <img src= "${dataitem.image}">
         <h4>${dataitem.name}</h4>
         <p>${dataitem.price}</p>
         `;
@@ -25,8 +25,8 @@ $(document).ready(function () {
           modaldiv.innerHTML = `
             <div class="cookie-modal"> 
                 <div class="cookie-modal-image">
-                    <img src="${dataitem.image}">
-                    <button><a href = "product.html"> VIEW MORE </a></button>
+                    <img src= "${dataitem.image}">
+                    <button><a href = "../tpl/product.html"> VIEW MORE </a></button>
                 </div>
                 <div class="cookie-modal-description">
                         <p>${dataitem.name}</p>
