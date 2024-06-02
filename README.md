@@ -1,1 +1,1 @@
-<h1>Cookie-Clicc</h1>
+<h1 style = "text-align: center">Cookie-Clicc</h1>
