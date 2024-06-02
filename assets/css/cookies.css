@@ -1,0 +1,140 @@
+.cookies {
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cookie {
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+  max-height: 400px;
+  max-width: 367px;
+  flex: 1 0;
+  box-sizing: border-box;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie {
+  font-family: "Open Sans";
+}
+
+.cookie p {
+  font-weight: 900;
+}
+
+.cookie img {
+  margin-top: 15px;
+  max-width: 320px;
+  border-radius: 25px;
+}
+
+.cookie h4 {
+  font-weight: 900;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.bigModal {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.99);
+}
+
+.cookie-modal {
+  box-shadow: 1px 1px 3px 50px white;
+  font-family: "Dancing Script";
+  border-radius: 15px;
+  background-color: white;
+  height: 50%;
+  width: 50%;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cookie-modal-image {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cookie-modal-image img {
+  border-radius: 50%;
+  box-shadow: 1px 1px 15px 1px black;
+}
+
+.cookie-modal-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cookie-purchase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-button img:hover {
+  cursor: pointer;
+}
+
+.close-button {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 15px;
+}
+
+.close-button img {
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.purchase-button button {
+  margin-top: 50px;
+  background: none;
+}
+
+.cart {
+  border: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  margin-top: 150px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffb347;
+  height: 120px;
+  width: 90%;
+  font-family: "Pacifico";
+}
+
+.button-remove {
+  padding: auto;
+}
+
+.minusiplus {
+  width: 100%;
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+  font-size: 25px;
+}
