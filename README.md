@@ -1,65 +1,59 @@
-Spapp.
+Cookie-Clicc
 ===============================
-**Spapp** is a simple jquery plugin that help to create single page application. The principle is quite simple.
-With this plugin you will load a main page wrapper that will load every other view (or if you prefer page) on url hash change.
-
+**Spapp** is a simple web app designed to sell cookies & showcase my understanding of the principles of frontned web development. It
+started as a project for my Foundations of Frontend Web Development course which turned into a passion project which I will fully continue
+implementing as time goes on.
 ----------
 
 
 HTML
 -------------
 ```html
-<main id="spapp" role="main">
-  <section id="view_xxx"></section>
-  ...
-  <section id="view_2"></section>
-  <section id="view_1"></section>
-</main>
+if(user.isHungry){
+  user.eatCookie();
+}
 ```
-create the main html structure, like above.
-Some rules:
+The website is divided into several HTML compontents. 
 
- - The `<main>` tag need to have "spapp" id.
- - All `<section>` tags inside the `<main>` tag will be treated as views.
- - If default view is not declared on init, the last section is automatically set as default.
- - You can add `data-load="file_to_load.html"` in section tag to set a file to load in section. Alternatively you can set a template for every section via js (see below).
+<ol>
+  <li>A landing page</li>
+  <li>Products page</li>
+  <li>About us page</li>
+  <li>A registration form page</li>
+</ol>
 
-
+-
 ----------
 JS
 -------------
-When you have set your html you can write the javascript to run the plugin. First of all init the app via `$.spapp()`, add your route and finally run the app. At the end you should have a snippet like this
+The page's content is dynamically loaded from a JSON array locally. An AJAX function is called to simulate fetching DATA from backend.
+
 ```js
-var app = $.spapp({
-  defaultView  : "#view_xxx",
-  templateDir  : "./tpl/",
-  pageNotFound : "error_404"
-});
-
-app.route({
-  view : "view_1",
-  load : "view_xxx.html",
-  onCreate: function() {  },
-  onReady: function() {  }
-});
-
-app.run();
+$(document).ready(function(){
+  $.getJSON('../JSON/items.json', function (data) {
+  console.log(data);
+  });
+})
+-
 ```
+With this, we can simulate backend without actually having one.
 
-On init ou can pass an object to the plugin to set the main config, detail of **config** object is:
 
- - **defaultView** is the view will be launched if the url does not have an hash
- - **templateDir**  is the directory where the plugin try to find any html file to load in `<section>` tags
- - **pageNotFound** is the view to use when the hash in the url don't mach any defined routes
+I've also built a storage system utilizing localStorage API. The key:value pairs for the cookies are as follows :
 
-After this you need to define your routes. The basic routes object was automatically created at the init of the plugin following the `<main id="spapp">` tag. To extend functionality you can define every single view with the `route()` method.
-The options of the route method are the foillowing:
+KEY - ID(a number that gets incremented for each click, giving each cookie an unique ID) COOKIENAME (Example Chocolate Chip Cookies)
+This would produce a key with the value ID 1 Chocolate Chip Cookies.
 
- - **view** is the section id, this is a mandatory field
- - **load** is the filename of the html file to load when the view is showed for the first time. 
- - **onCreate** is a function launched once when the view is built for the first time
- - **onReady** is a function launched every time the view is showed
+VALUE - Is calculated by entering the amount of cookies bought in the input field. By default, only one box of cookies will be bought.
 
-If `load` property is declared in the `route()` method it override the `data-load` attribute set in the `<section>` tag.
+So, the final product would be ID 1 Chocolate Chip Cookies : 1
 
-If `load` property is declared when the view are built the `onCreate()` and `onReady()` functions are launched only when template are loaded.
+```js
+          button.addEventListener("click", () => {
+            modaldiv.remove();
+            toastr.success("Thanks for the purchase!");
+            localStorage.setItem(`${id} ${dataitem.name}`, value);
+            renderPurchases();
+          });
+
+```
