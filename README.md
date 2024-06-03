@@ -1,6 +1,6 @@
 Cookie-Clicc
 ===============================
-**Spapp** is a simple web app designed to sell cookies & showcase my understanding of the principles of frontned web development. It
+**Cookie-Clicc** is a simple web app designed to sell cookies & showcase my understanding of the principles of frontned web development. It
 started as a project for my Foundations of Frontend Web Development course which turned into a passion project which I will fully continue
 implementing as time goes on.
 ----------
@@ -49,11 +49,11 @@ VALUE - Is calculated by entering the amount of cookies bought in the input fiel
 So, the final product would be ID 1 Chocolate Chip Cookies : 1
 
 ```js
-          button.addEventListener("click", () => {
-            modaldiv.remove();
-            toastr.success("Thanks for the purchase!");
-            localStorage.setItem(`${id} ${dataitem.name}`, value);
-            renderPurchases();
-          });
+ button.addEventListener("click", () => {
+ modaldiv.remove();
+ toastr.success("Thanks for the purchase!");
+ localStorage.setItem(`${id} ${dataitem.name}`, value);
+ renderPurchases();
+ });
 
 ```
