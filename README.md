@@ -1,7 +1,8 @@
 Cookie-Clicc
 ===============================
-**Cookie-Clicc** is a simple web app designed to sell cookies & showcase my understanding of the principles of frontned web development. It
-started as a project for my Foundations of Frontend Web Development course which turned into a passion project which I will fully continue
+**Cookie-Clicc** is a simple web app designed to sell cookies & showcase my understanding of the principles of frontned web development. 
+
+It started as a project for my Foundations of Frontend Web Development course which turned into a passion project which I will fully continue
 implementing as time goes on.
 ----------
 
