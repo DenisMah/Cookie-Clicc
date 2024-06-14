@@ -22,8 +22,6 @@ $(document).ready(function () {
     },
     submitHandler: function (form) {
       try {
-        //* Block UI on form submission
-
         $.blockUI({
           message:
             '<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>',
