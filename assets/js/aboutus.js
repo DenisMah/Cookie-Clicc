@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $.getJSON("JSON/people.json", function (data) {
+  $.getJSON("../assets/JSON/people.json", function (data) {
     data.forEach((element) => {
       const person = document.createElement("div");
       $(person).addClass("person");
@@ -58,7 +58,6 @@ const accordion = document.querySelectorAll(".accordion");
 
 accordion.forEach((item) => {
   item.addEventListener("click", (ev) => {
-    console.log("allah");
     if (item.classList.contains("active")) {
       item.classList.remove("active");
     } else {
