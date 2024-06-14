@@ -25,8 +25,7 @@ $(document).ready(function () {
           modaldiv.innerHTML = `
             <div class="cookie-modal"> 
                 <div class="cookie-modal-image">
-                    <img src= "${dataitem.image}">
-                    <button><a href = "../tpl/product.html"> VIEW MORE </a></button>
+                    <img src= "${dataitem.image}" class = "cookie-modal-image-image">
                 </div>
                 <div class="cookie-modal-description">
                         <p>${dataitem.name}</p>
@@ -52,6 +51,9 @@ $(document).ready(function () {
           value = $("#cookieamount").val();
           const button = document.getElementById("button-purchase");
 
+          const cookieModalImageImage = document.querySelector(
+            ".cookie-modal-image-image"
+          );
           button.addEventListener("click", () => {
             modaldiv.remove();
             toastr.success("Thanks for the purchase!");

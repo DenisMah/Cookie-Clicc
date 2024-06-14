@@ -28,5 +28,10 @@ $(document).ready(function () {
     load: "getinvolved.html",
   });
 
+  app.route({
+    view: "view_product",
+    load: "product.html",
+  });
+
   app.run();
 });

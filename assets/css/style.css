@@ -166,7 +166,7 @@
   background-image: url("../Images/Background-Image.jpg");
   justify-content: center;
   display: flex;
-  position: relative;
+  position: fixed;
   overflow: hidden;
 }
 
